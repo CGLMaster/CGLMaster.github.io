@@ -49,8 +49,8 @@ body{
 
 .videojuego{
   margin-top:30px;
-  height: 210px;
-  width: 420px;
+  height: 170px;
+  width: 340px;
   border-radius: 10px;
 }
 
@@ -219,8 +219,8 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 200px;
-  width: 400px;
+  height: 165px;
+  width: 330px;
   margin-left: 10px;
 }
 
@@ -243,19 +243,51 @@ body{
   display: none;
   flex-direction: column;
   justify-content: end;
-  height: 200px;
-  width: 400px;
+  height: 165px;
+  width: 330px;
   margin-left: 10px;
   margin-top: 5px;
 }
 
 .Informacion{
+  font-size: 24px;
   color: white;
   margin: 0;
 }
 
 .texto{
+  font-size: 14px;
+  margin:0;
   color: white;
 }
 
+.add{
+  height: 30px;
+}
+
+@media screen and (min-width: 1600px){
+  .texto{
+    font-size: 17px;
+  }
+  .Informacion{
+    font-size: 30px;
+  }
+  .add{
+    height: 40px;
+  }
+  .extraInfo{
+    height: 200px;
+    width: 400px;
+  }
+  .Info{
+    height: 200px;
+    width: 400px;
+  }
+  .videojuego{
+    margin-top:30px;
+    height: 210px;
+    width: 420px;
+    border-radius: 10px;
+  }
+}
 

@@ -1,0 +1,261 @@
+
+body{
+  margin:0;
+  background-image: url("https://fondosmil.com/fondo/480.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#cabecera{
+  background-color: #4e4ea3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  box-shadow: 5px 5px 40px;
+	left: 0;
+	top: 0;
+	position: fixed;
+}
+
+.logo{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.coleccion{
+  margin-left:50px;
+  margin-right:50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#misJuegos{
+  margin-top: 190px;
+  font-size: 22px;
+  background: linear-gradient(to left,rgba(255, 255, 0, 0.7),rgb(255, 99, 71, 0.7) 100%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; 
+  width: 40%;
+}
+
+#misJuegos > h1{
+  margin-left: 50px;
+  color: white;
+}
+
+.videojuego{
+  margin-top:30px;
+  height: 210px;
+  width: 420px;
+  border-radius: 10px;
+}
+
+.add:hover{
+  cursor: pointer;
+}
+
+#V1{
+  background: linear-gradient(to left, transparent, #bba24f), url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/10/pokemon-sol-luna-avance-juegos-nintendo-3ds_4.jpg?itok=vQi6w8c1");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V1:hover{
+  background-image: url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/10/pokemon-sol-luna-avance-juegos-nintendo-3ds_4.jpg?itok=vQi6w8c1");
+  background-color: #bba24f;
+  background-blend-mode: multiply;
+}
+
+#V2{
+  background: linear-gradient(to left, transparent, #247510), url("https://www.nextgame.es/wp-content/uploads/2021/12/FHoJBpdXsAEzYj2.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V2:hover{
+  background-image: url("https://www.nextgame.es/wp-content/uploads/2021/12/FHoJBpdXsAEzYj2.jpg");
+  background-color: #247510;
+  background-blend-mode: multiply;
+}
+
+#V3{
+  background: linear-gradient(to left, transparent, #4e6df7), url("https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt5689d15117a9bb1c/63356d1833b21842147092ad/FIFA_23_Heung-min_Son.jpg?format=jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V3:hover{
+  background-image: url("https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt5689d15117a9bb1c/63356d1833b21842147092ad/FIFA_23_Heung-min_Son.jpg?format=jpg");
+  background-color: #4e6df7;
+  background-blend-mode: multiply;
+}
+
+#V4{
+  background: linear-gradient(to left, transparent, #d13939), url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/97616.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V4:hover{
+  background-image: url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/97616.jpg");
+  background-color: #d13939;
+  background-blend-mode: multiply;
+}
+
+#juegosRecomendados{
+  margin-top:50px;
+  font-size: 22px;
+  background: linear-gradient(to left,rgba(0, 255, 34, 0.7),rgba(4, 85, 2, 0.7) 100%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; 
+  width: 40%;
+}
+
+#juegosRecomendados > h1{
+  margin-left: 50px;
+  color: white;
+}
+
+#V5{
+  background: linear-gradient(to left, transparent, #f0ac2f), url("https://assets.reedpopcdn.com/elden-ring-farming-spots-best-locations-runes-early-late-game-8042-1645632901614.jpg/BROK/thumbnail/1600x900/quality/100/elden-ring-farming-spots-best-locations-runes-early-late-game-8042-1645632901614.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V5:hover{
+  background-image: url("https://assets.reedpopcdn.com/elden-ring-farming-spots-best-locations-runes-early-late-game-8042-1645632901614.jpg/BROK/thumbnail/1600x900/quality/100/elden-ring-farming-spots-best-locations-runes-early-late-game-8042-1645632901614.jpg");
+  background-color: #f0ac2f;
+  background-blend-mode: multiply;
+}
+
+#V6{
+  background: linear-gradient(to left, transparent, #62067e), url("https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/10/modern-warfare-2-game-modes-list.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V6:hover{
+  background-image: url("https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/10/modern-warfare-2-game-modes-list.jpg");
+  background-color: #62067e;
+  background-blend-mode: multiply;
+}
+
+#V7{
+  background: linear-gradient(to left, transparent, #7e0606), url("https://www.telegraph.co.uk/content/dam/gaming/2022/11/04/TELEMMGLPICT000314969414_trans_NvBQzQNjv4BqUPbJ8y35zmGK7xftDx39VUVLFMJPVdIxCB0E8v9PYFM.jpeg?imwidth=680");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V7:hover{
+  background-image: url("https://www.telegraph.co.uk/content/dam/gaming/2022/11/04/TELEMMGLPICT000314969414_trans_NvBQzQNjv4BqUPbJ8y35zmGK7xftDx39VUVLFMJPVdIxCB0E8v9PYFM.jpeg?imwidth=680");
+  background-color: #7e0606;
+  background-blend-mode: multiply;
+}
+
+#V8{
+  background: linear-gradient(to left, transparent, #20067e), url("https://i.ytimg.com/vi/_w6Uxclog7E/maxresdefault.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V8:hover{
+  background-image: url("https://i.ytimg.com/vi/_w6Uxclog7E/maxresdefault.jpg");
+  background-color: #20067e;
+  background-blend-mode: multiply;
+}
+
+#V9{
+  background: linear-gradient(to left, transparent, #066c7e), url("https://wallpapercave.com/wp/wp6005486.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V9:hover{
+  background-image: url("https://wallpapercave.com/wp/wp6005486.jpg");
+  background-color: #066c7e;
+  background-blend-mode: multiply;
+}
+
+#V10{
+  background: linear-gradient(to left, transparent, #333333), url("https://blog.latam.playstation.com/tachyon/sites/3/2022/06/3d2d01626430e2ee9117d81b834970fa6242e10f.jpg?resize=1088%2C612&crop_strategy=smart");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V10:hover{
+  background-image: url("https://blog.latam.playstation.com/tachyon/sites/3/2022/06/3d2d01626430e2ee9117d81b834970fa6242e10f.jpg?resize=1088%2C612&crop_strategy=smart");
+  background-color: #333333;
+  background-blend-mode: multiply;
+}
+
+#V11{
+  background: linear-gradient(to left, transparent, #019682), url("https://images.igdb.com/igdb/image/upload/t_original/scaoj7.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#V11:hover{
+  background-image: url("https://images.igdb.com/igdb/image/upload/t_original/scaoj7.jpg");
+  background-color: #019682;
+  background-blend-mode: multiply;
+}
+
+.Info{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 200px;
+  width: 400px;
+  margin-left: 10px;
+}
+
+.titulo{
+  color: white;
+  font-size: 28px;
+  margin: 0;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.subtitulo{
+  color: white;
+  font-size: 21px;
+  margin: 0;
+  margin-bottom: 10px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.extraInfo{
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+  height: 200px;
+  width: 400px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.Informacion{
+  color: white;
+  margin: 0;
+}
+
+.texto{
+  color: white;
+}
+
+

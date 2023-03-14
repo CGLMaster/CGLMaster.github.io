@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    background: rgb(189, 189, 189);
+    background: linear-gradient(90deg, rgb(123, 153, 172) 0%, rgb(101, 142, 177) 45%, rgb(45, 68, 85) 95%);
+    background-size: 300% 100%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 13em;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    height: 900px;
+}
+
+#grid {
+    overflow-x: auto;
+}
+
+#grid::-webkit-scrollbar-track,
+.grid-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#grid::-webkit-scrollbar,
+.grid-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+            bottom,
+            top,
+            color-stop(0.44, rgb(122, 153, 217)),
+            color-stop(0.72, rgb(73, 125, 189)),
+            color-stop(0.86, rgb(28, 58, 148)));
+}
+
+#grid::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+            left top,
+            right top,
+            color-stop(0.34, rgb(122, 153, 217)),
+            color-stop(0.52, rgb(73, 125, 189)),
+            color-stop(0.76, rgb(28, 58, 148)));
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    min-height: 65px;
+    min-width: 65px;
+    max-height: 65px;
+    max-width: 65px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: none;
+}
+
+.endNode {
+    background-image: url("img/end.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.startNode {
+    background-image: url("img/start.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.createWall {
+    background-image: url("img/cloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.createPenalty {
+    background-image: url("img/penalty.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.waypointNode {
+    background-image: url("img/torreControl.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heightNode {
+    background-image: url("img/mountain.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pathNode {
+    animation: hideshow 1.4s forwards;
+    object-fit: cover;
+}
+
+@keyframes hideshow {
+    100% {
+        content: url("img/estela.png");
+        width: 60px;
+        height: 60px;
+    }
+}
+
+#algorithm {
+    background-color: #42b89e;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    padding: .5em 1em;
+    margin: .7em;
+    margin-left: 3em;
+    cursor: pointer;
+}
+
+#algorithm:hover {
+    background-color: #2a7766;
+}
+
+#buttonReset {
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    background-color: transparent;
+    padding: .5em 1em;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#buttonReset:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+.container-botones {
+    display: flex;
+    justify-content: center;
+    background-color: #2e4151;
+    padding: .7em;
+    gap: .7em;
+    border-bottom: 1px solid #465b6c;
+}
+
+.container-botones button {
+    background-color: rgb(217, 217, 217);
+    font-weight: bold;
+    border: none;
+    padding: .5em 1em;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container-botones button:hover {
+    color:#2a7766;
+
+}
+
+.container-botones button.button-active {
+    /* background-color: aqua; */
+    background-color: #42b89e;
+    color: white;
+}
+
+
+
+
+
+
+.dimensions-form {
+    /* background-color: rgb(55, 55, 55); */
+    background-color: #2e4151;
+    color: white;
+    padding: .7em;
+    border-bottom: 1px solid #465b6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimensions-form label {
+    margin-right: .5em;
+}
+
+.dimensions-form input {
+    padding: .5em 1em;
+    width: 5em;
+    margin-right: 1em;
+    background-color: #dedede;
+    border: none;
+    border-radius: 3px;
+}
+
+.dimensions-form button {
+    background-color: #42b89e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+
+.dimensions-form button:hover {
+    background-color: #2a7766;
+}
+
+
+
+.penalizacion-form {
+    background-color: #2e4151;
+    color: white;
+    padding: .7em;
+    border-bottom: 1px solid #465b6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.penalizacion-form label {
+    margin-right: .5em;
+}
+
+.penalizacion-form #inputPenalizacion {
+    padding: .5em 1em;
+    width: 4em;
+    margin-right: 1em;
+    background-color: #dedede;
+    border: none;
+    border-radius: 3px;
+}
+
+.penalizacion-form #inputHeight,
+.penalizacion-form #inputMountainHeight {
+    padding: .5em 1em;
+    width: 7em;
+    background-color: #dedede;
+    margin-right: 1em;
+    border: none;
+    border-radius: 3px;
+}
+
+.penalizacion-form button {
+    background-color: #35c8a8;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+
+
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+
+
+/* 3 */
+.btn-3 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+
+}
+
+.btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-3:before,
+.btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+}
+
+.btn-3:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-3:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-3:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-3:hover:before {
+    height: 100%;
+}
+
+.btn-3:hover:after {
+    width: 100%;
+}
+
+.btn-3 span:hover {
+    color: rgba(2, 126, 251, 1);
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-3 span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-3 span:hover:before {
+    height: 100%;
+}
+
+.btn-3 span:hover:after {
+    width: 100%;
+}
+
+#alert-container {
+    position: fixed;
+    left: 36%;
+    top: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+}
+
+.alert {
+    min-height: 67px;
+    width: 540px;
+    max-width: 90%;
+    border-radius: 12px;
+    padding: 16px 22px 17px 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f2a600;
+    justify-content: space-around;
+}
+
+.alert .icon__wrapper {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert i {
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.alert p {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: Verdana;
+    text-align: center;
+    margin-left: 10px;
+}

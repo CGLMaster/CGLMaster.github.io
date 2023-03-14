@@ -135,6 +135,12 @@ body {
     object-fit: cover;
 }
 
+.stormNode {
+    background-image: url("img/storm.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @keyframes hideshow {
     100% {
         content: url("img/estela.png");
@@ -185,7 +191,7 @@ body {
     border-bottom: 1px solid #465b6c;
 }
 
-.container-botones button {
+.container-botones button:not(#stormChecked) {
     background-color: rgb(217, 217, 217);
     font-weight: bold;
     border: none;
@@ -195,13 +201,31 @@ body {
     cursor: pointer;
 }
 
-.container-botones button:hover {
+.container-botones button:hover:not(#stormChecked) {
     color:#2a7766;
 
 }
 
-.container-botones button.button-active {
-    /* background-color: aqua; */
+#stormChecked{
+    background-color: rgb(217, 217, 217);
+    font-weight: bold;
+    border: none;
+    padding: .5em 1em;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#stormChecked:hover{
+    color:#dc3545;
+}
+
+#stormChecked.button-active {
+    background-color: #dc3545;
+    color: white;
+}
+
+.container-botones button:not(#stormChecked).button-active {
     background-color: #42b89e;
     color: white;
 }
@@ -212,7 +236,6 @@ body {
 
 
 .dimensions-form {
-    /* background-color: rgb(55, 55, 55); */
     background-color: #2e4151;
     color: white;
     padding: .7em;

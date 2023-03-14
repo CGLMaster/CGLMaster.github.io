@@ -50,6 +50,18 @@ document.getElementById("inputHeight").addEventListener("change", function () {
     planeHeight = parseInt(this.value);
 });
 
+let stormButton = document.getElementById("stormChecked");
+let drawStorms = stormButton.checked;
+document.getElementById("stormChecked").addEventListener("click", function () {
+    drawStorms = !drawStorms;
+    if (drawStorms) {
+        stormButton.classList.add("button-active");
+    }
+    else {
+        stormButton.classList.remove("button-active");
+    }
+});
+
 // CLASE DEL NODO QUE CONFORMA CADA CELDA
 
 class node {
@@ -69,6 +81,7 @@ class node {
         this.waypoint = false;                        // Indica si es un waypoint o no
         this.height = 0;                                // Indica la altura de ese nodo
         this.visited = false;                           // Comprueba si el nodo ha sido visitado
+        this.storm = false;                             // Comprueba si el nodo es ahora una tormenta
     }
 
     changeWalkable() {
@@ -143,6 +156,11 @@ class node {
     waypointNode() {
         let nodo = document.getElementById(this.id);
         nodo.classList.add("waypointNode");
+    }
+
+    stormNode(){
+        let nodo = document.getElementById(this.id);
+        nodo.classList.add("stormNode");
     }
 
     // BÚSQUEDA DE CADA VECINO
@@ -484,7 +502,7 @@ async function findPath(start, end) {
             let neighbor = neighbors[i];
 
             // Saltea los nodos no caminables o los que están en el conjunto cerrado
-            if (neighbor.walkable || closeSet.includes(neighbor) || neighbor.height > planeHeight) {
+            if (neighbor.walkable || closeSet.includes(neighbor) || neighbor.height > planeHeight || neighbor.storm) {
                 continue;
             }
             // Calcula los valores de g, h y f para el vecino
@@ -517,6 +535,71 @@ async function findPath(start, end) {
     console.log("No se encontro camino");
 
     return null;
+}
+
+async function drawPath(path){
+    for (let i = -1; i < path.length; i++) {
+        let tipo;
+        if(end !== path[i] && path[i+1].storm){
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                    matriz[i][j].parent = null;
+                }
+            }
+            path[i].pathNode("top");
+            newPath = await findPath(path[i], end);
+            path = [];
+            await drawPath(newPath);
+        }
+        else{
+            if(i === -1){
+                if (start.x === path[i + 1].x && start.y < path[i + 1].y) { tipo = "right" }
+                if (start.x === path[i + 1].x && start.y > path[i + 1].y) { tipo = "left" }
+                if (start.x < path[i + 1].x && start.y === path[i + 1].y) { tipo = "down" }
+                if (start.x > path[i + 1].x && start.y === path[i + 1].y) { tipo = "top" }
+                if (start.x < path[i + 1].x && start.y < path[i + 1].y) { tipo = "downRight" }
+                if (start.x > path[i + 1].x && start.y < path[i + 1].y) { tipo = "topRight" }
+                if (start.x < path[i + 1].x && start.y > path[i + 1].y) { tipo = "downLeft" }
+                if (start.x > path[i + 1].x && start.y > path[i + 1].y) { tipo = "topLeft" }
+                start.pathNode(tipo);
+                document.getElementById(start.id).style.backgroundColor = "rgba(179, 113, 255, 0.6)";
+                await new Promise(resolve => setTimeout(resolve, 400));
+            }
+            else{
+                console.log("Voy por X: " + path[i].x + "|| Y: " + path[i].y);
+                document.getElementById(path[i].id).style.backgroundColor = "rgba(179, 113, 255, 0.6)";
+                if (end !== path[i]) {
+                    if (path[i].x === path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "right" }
+                    if (path[i].x === path[i + 1].x && path[i].y > path[i + 1].y) { tipo = "left" }
+                    if (path[i].x < path[i + 1].x && path[i].y === path[i + 1].y) { tipo = "down" }
+                    if (path[i].x > path[i + 1].x && path[i].y === path[i + 1].y) { tipo = "top" }
+                    if (path[i].x < path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "downRight" }
+                    if (path[i].x > path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "topRight" }
+                    if (path[i].x < path[i + 1].x && path[i].y > path[i + 1].y) { tipo = "downLeft" }
+                    if (path[i].x > path[i + 1].x && path[i].y > path[i + 1].y) { tipo = "topLeft" }
+                    path[i].pathNode(tipo);
+                    await new Promise(resolve => setTimeout(resolve, 400));
+                }
+                else {
+                    path[i].pathNode("top");
+                }
+            }
+        }
+        if(drawStorms){
+            let rand = Math.random();
+            console.log("RAND: " + rand);
+            if(rand < 0.4){
+                console.log("Entre");
+                let randX = Math.round(Math.random()*(rows-1));
+                let randY = Math.round(Math.random()*(cols-1));
+                console.log("X: " + randX + "|| Y: " + randY);
+                if(matriz[randX][randY] !== start && matriz[randX][randY] !== end && !matriz[randX][randY].walkable && !matriz[randX][randY].waypoint && matriz[randX][randY].height === 0){
+                    matriz[randX][randY].stormNode();
+                    matriz[randX][randY].storm = true;
+                }
+            }
+        }
+    }
 }
 
 async function findPathWithWaypoints() {
@@ -562,40 +645,7 @@ async function findPathWithWaypoints() {
         }
     }
     if (path !== null) {
-        for (let i = -1; i < path.length; i++) {
-            let tipo;
-            if(i === -1){
-                if (start.x === path[i + 1].x && start.y < path[i + 1].y) { tipo = "right" }
-                if (start.x === path[i + 1].x && start.y > path[i + 1].y) { tipo = "left" }
-                if (start.x < path[i + 1].x && start.y === path[i + 1].y) { tipo = "down" }
-                if (start.x > path[i + 1].x && start.y === path[i + 1].y) { tipo = "top" }
-                if (start.x < path[i + 1].x && start.y < path[i + 1].y) { tipo = "downRight" }
-                if (start.x > path[i + 1].x && start.y < path[i + 1].y) { tipo = "topRight" }
-                if (start.x < path[i + 1].x && start.y > path[i + 1].y) { tipo = "downLeft" }
-                if (start.x > path[i + 1].x && start.y > path[i + 1].y) { tipo = "topLeft" }
-                start.pathNode(tipo);
-                document.getElementById(start.id).style.backgroundColor = "rgba(179, 113, 255, 0.6)";
-                await new Promise(resolve => setTimeout(resolve, 400));
-            }
-            else{
-                document.getElementById(path[i].id).style.backgroundColor = "rgba(179, 113, 255, 0.6)";
-                if (end !== path[i]) {
-                    if (path[i].x === path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "right" }
-                    if (path[i].x === path[i + 1].x && path[i].y > path[i + 1].y) { tipo = "left" }
-                    if (path[i].x < path[i + 1].x && path[i].y === path[i + 1].y) { tipo = "down" }
-                    if (path[i].x > path[i + 1].x && path[i].y === path[i + 1].y) { tipo = "top" }
-                    if (path[i].x < path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "downRight" }
-                    if (path[i].x > path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "topRight" }
-                    if (path[i].x < path[i + 1].x && path[i].y > path[i + 1].y) { tipo = "downLeft" }
-                    if (path[i].x > path[i + 1].x && path[i].y > path[i + 1].y) { tipo = "topLeft" }
-                    path[i].pathNode(tipo);
-                    await new Promise(resolve => setTimeout(resolve, 400));
-                }
-                else {
-                    path[i].pathNode("top");
-                }
-            }
-        }
+        await drawPath(path);
     }
     else{   // En caso de que no se encuentre un camino, muetra una alerta
         alert_container.innerHTML = "<div class='alert'><div class='icon__wrapper'><i class='bi bi-exclamation-triangle-fill'></i></div><p>El algoritmo no ha podido encontrar una solución.</p></div>";
@@ -626,7 +676,9 @@ function desactivateAll(tipo) {
 
     let buttons = document.getElementById("container-botones").getElementsByClassName("button-active");
     for (let b of buttons) {
-        b.classList.remove("button-active");
+        if(b.id !== "stormChecked"){
+            b.classList.remove("button-active");
+        }
     }
     if (tipo === "wall") {
         addWallSeleccionado = !addWallSeleccionado;

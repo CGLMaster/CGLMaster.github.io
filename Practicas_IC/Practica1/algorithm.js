@@ -577,7 +577,6 @@ async function drawPath(path){
                 await new Promise(resolve => setTimeout(resolve, 400));
             }
             else{
-                console.log("Voy por X: " + path[i].x + "|| Y: " + path[i].y);
                 document.getElementById(path[i].id).style.backgroundColor = "rgba(179, 113, 255, 0.6)";
                 if (end !== path[i]) {
                     if (path[i].x === path[i + 1].x && path[i].y < path[i + 1].y) { tipo = "right" }
@@ -598,12 +597,10 @@ async function drawPath(path){
         }
         if(drawStorms){
             let rand = Math.random();
-            console.log("RAND: " + rand);
             if(rand < 0.4){
-                console.log("Entre");
                 let randX = Math.round(Math.random()*(rows-1));
                 let randY = Math.round(Math.random()*(cols-1));
-                console.log("X: " + randX + "|| Y: " + randY);
+                console.log("Se generó una tormenta en las coordenadas: X: " + randX + " || Y: " + randY);
                 if(matriz[randX][randY] !== start && matriz[randX][randY] !== end && !matriz[randX][randY].walkable && !matriz[randX][randY].waypoint && matriz[randX][randY].height === 0){
                     matriz[randX][randY].stormNode();
                     matriz[randX][randY].storm = true;

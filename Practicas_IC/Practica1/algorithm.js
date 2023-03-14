@@ -549,7 +549,18 @@ async function drawPath(path){
             path[i].pathNode("top");
             newPath = await findPath(path[i], end);
             path = [];
-            await drawPath(newPath);
+            if (newPath !== null) {
+                await drawPath(newPath);
+            }
+            else{   // En caso de que no se encuentre un camino, muetra una alerta
+                let alert_container = document.getElementById("alert-container");
+                alert_container.innerHTML = "<div class='alert'><div class='icon__wrapper'><i class='bi bi-exclamation-triangle-fill'></i></div><p>El algoritmo no ha podido encontrar una solución.</p></div>";
+                window.setTimeout(function() {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                        $(this).remove(); 
+                    });
+                }, 2800);
+            }
         }
         else{
             if(i === -1){

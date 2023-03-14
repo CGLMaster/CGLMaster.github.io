@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="../CSSs/curse1.css" rel="stylesheet">
+        <title>GUI</title>
+    </head>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <body>
+        <header>
+            <h1 class="titulo">Gestión Matrículas CFI</h1>
+            <img class="icono" src="../Resources/icono.PNG" onclick="javascript:location.replace('../index.html')">
+            <div class="cuenta">
+                <div class="infoCuenta">
+                    <h2 class="user">Virginia Francisco Gilmartín</h2>
+                    <a id="cerrarSesion" href="login.html">&nbsp;&nbsp;Cerrar sesión&nbsp;&nbsp;</a>
+                </div>
+                <img class="logo" src="../Resources/perfil.png">
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="enunciadoBtnAdd">
+                <div class="encabezado">
+                    <div><h2 class="enunciado">Listado de cursos disponibles:</h2></div>
+                    <div class="seccionAddSearch">
+                        <div class="botonAdd">
+                            <img src="../Resources/aniadir.png" height="50" width="50" title="Añadir curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="1&Añadir nuevo curso">
+                        </div>
+                        <section class="pp">
+                            <button data-bs-toggle="modal" data-bs-target="#filtroModal" class="filtro">
+                                <img src="../Resources/filtro.png" height="30" width="30">
+                            </button>
+                        </section>
+                        <div class="busquedaLupa">
+                            <input type="search" placeholder='Buscar...' id='search'>
+                            <div id='button-holder'>
+                                <img src='../Resources/lupe.png'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section><h3>Textos científicos con LaTex</h3></section>
+                            <section>
+                                <strong>ID:</strong> LATEX &nbsp;&nbsp;
+                                <strong>Área:</strong> Ofimática &nbsp;&nbsp;
+                                <strong>Nivel:</strong> Especialización
+                            </section>
+                        </div>
+
+                        <div class="botonesListModDel">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#cursesModal" class="listStudents">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="&Textos científicos con LaTex&LATEX&Ofimática&Especialización">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar curso" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section><h3>Ofimática en la nube con Google Drive</h3></section>
+                            <section>
+                                <strong>ID:</strong> DRIVE &nbsp;&nbsp;
+                                <strong>Área:</strong> Ofimática &nbsp;&nbsp;
+                                <strong>Nivel:</strong> Generalista
+                            </section>
+                        </div>
+
+                        <div class="botonesListModDel">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#cursesModal" class="listStudents">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="&Ofimática en la nube con Google Drive&DRIVE&Ofimática&Generalista">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar curso" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section><h3>Análisis de datos con Python</h3></section>
+                            <section>
+                                <strong>ID:</strong> PYTHONDATA &nbsp;&nbsp;
+                                <strong>Área:</strong> Tecnologías Informáticas &nbsp;&nbsp;
+                                <strong>Nivel:</strong> Especialización
+                            </section>
+                        </div>
+
+                        <div class="botonesListModDel">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#cursesModal" class="listStudents">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="&Análisis de datos con Python&PYTHONDATA&Tecnologías Informáticas&Especialización">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar curso" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section><h3>Base de datos con Access</h3></section>
+                            <section>
+                                <strong>ID:</strong> ACCESSBD &nbsp;&nbsp;
+                                <strong>Área:</strong> Ofimática &nbsp;&nbsp;
+                                <strong>Nivel:</strong> Generalista
+                            </section>
+                        </div>
+
+                        <div class="botonesListModDel">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#cursesModal" class="listStudents">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="&Base de datos con Access&ACCESSBD&Ofimática&Generalista">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar curso" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section><h3>Desarrollo web con Javascript y jQuery</h3></section>
+                            <section>
+                                <strong>ID:</strong> JSJQUERY &nbsp;&nbsp;
+                                <strong>Área:</strong> Tecnologías Informáticas-Internet &nbsp;&nbsp;
+                                <strong>Nivel:</strong> Especialización
+                            </section>
+                        </div>
+
+                        <div class="botonesListModDel">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#cursesModal" class="listStudents">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="&Desarrollo web con Javascript y jQuery&JSJQUERY&Tecnologías Informáticas-Internet&Especialización">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar curso" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section><h3>Herramientas TIC en la UCM</h3></section>
+                            <section>
+                                <strong>ID:</strong> TIC &nbsp;&nbsp;
+                                <strong>Área:</strong> Internet &nbsp;&nbsp;
+                                <strong>Nivel:</strong> Iniciación
+                            </section>
+                        </div>
+
+                        <div class="botonesListModDel">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#cursesModal" class="listStudents">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="&Herramientas TIC en la UCM&TIC&Internet&Iniciación">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar curso" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Para paginar -->
+            <section class="paginacion">
+                <ul>
+                    <li><a href="Curse1.html" class="active">1</a></li>
+                    <li><a href="Curse2.html">2</a></li>
+                </ul>
+                <div class="goup">
+                    <img id="I19" src="../Resources/desplegar_blanco.png" height ="30" width="50">
+                </div>
+            </section>
+        </main>
+
+        <!-- SCRIPTS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){ 
+                $(window).scroll(function(){ 
+                    if ($(this).scrollTop() > 200) { 
+                        $('.goup').fadeIn(); 
+                    } else { 
+                        $('.goup').fadeOut(); 
+                    } 
+                }); 
+                $('.goup').click(function(){ 
+                    $("html, body").animate({ scrollTop: 0 }, 20); 
+                    return false; 
+                }); 
+            });
+        </script>
+
+        <script>
+            $(document).ready(function (e) {
+              $('#editModal').on('show.bs.modal', function(e) {    
+                 var id = $(e.relatedTarget).data().id;
+                 var array = id.split('&');
+                 if(array[0] === '1'){
+                    document.getElementById("exampleModalLabel").innerHTML= array[1];
+                    document.getElementById("guardar").innerHTML = "Añadir";
+                    $(e.currentTarget).find('#name').val(array[2]);
+                    $(e.currentTarget).find('#id').val(array[3]);
+                    $(e.currentTarget).find('#area').val(array[4]);
+                    $(e.currentTarget).find('#nivel').val(array[5]);
+                 }
+                 else{
+                    document.getElementById("exampleModalLabel").innerHTML= "Editar información del curso";
+                    document.getElementById("guardar").innerHTML = "Guardar cambios";
+                    $(e.currentTarget).find('#name').val(array[1]);
+                    $(e.currentTarget).find('#id').val(array[2]);
+                    $(e.currentTarget).find('#area').val(array[3]);
+                    $(e.currentTarget).find('#nivel').val(array[4]);
+                 }
+              });
+            });
+        </script>
+
+        <script>
+            $('#aceptar1').on('click', function(e)  {
+                console.log("entre");
+                $('#bt1').addClass("disabled");
+                document.getElementById("t1").style.textDecoration = "line-through";
+            })
+            $('#aceptar2').on('click', function (e) {
+                $('#bt2').addClass("disabled");
+                document.getElementById("t2").style.textDecoration = "line-through";
+            })
+            $('#aceptar3').on('click', function (e) {
+                $('#bt3').addClass("disabled");
+                document.getElementById("t3").style.textDecoration = "line-through";
+            })
+            $('#aceptar4').on('click', function (e) {
+                $('#bt4').addClass("disabled");
+                document.getElementById("t4").style.textDecoration = "line-through";
+            })
+            $('#aceptar5').on('click', function (e) {
+                $('#bt5').addClass("disabled");
+                document.getElementById("t5").style.textDecoration = "line-through";
+            })
+        </script>
+        
+        <!-- Para boton editar -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Editar información del curso</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="name" class="col-form-label">Nombre del curso:</label>
+                              <input type="text" class="form-control" id="name" placeholder="Introduzca el nombre del curso">
+                            </div>
+                            <div class="form-group">
+                                <label for="idCurso" class="col-form-label">ID del curso:</label>
+                                <input type="text" class="form-control" id="id" placeholder="Introduzca el identificador del curso">
+                              </div>
+                            <div class="form-group">
+                              <label for="area" class="col-form-label">Área:</label>
+                              <input type="text" class="form-control" id="area" placeholder="Introduzca el área al que pertenece">
+                            </div>
+                            <div class="form-group">
+                                <label for="nivel" class="col-form-label">Nivel:</label>
+                                <input type="text" class="form-control" id="nivel" placeholder="Introduzca el nivel del curso">
+                              </div>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="guardar">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Para boton eliminar -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2>¿Está seguro de que quiere eliminar este curso?</h2>
+                    </div>     
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cursesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-2" id="exampleModalLabel2">Alumn@s en el curso</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="inicio">
+                            <h3 class="subtitulo">Si desea desmatricular al alumno del curso, pulse la "X"</h3>
+                        </div>
+                        <br>
+                        <div>
+                            <h2 id="t1">MARÍA BARCENILLA HINCHADO. <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;8.0 Notable&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt1" data-bs-toggle="modal" data-bs-target="#warningModal1"></button>
+                        </div>
+                        <div>
+                            <h2 id="t2">ALBERTO CHAVES LÓPEZ. <FONT style="color:white; background-color: orangered; border-radius: 10px;">&nbsp;&nbsp;No presentado&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt2" data-bs-toggle="modal" data-bs-target="#warningModal2"></button>
+                        </div>
+                        <div>
+                            <h2 id="t3">BRYAN EDUARDO CÓRDOVA ASCURRA. <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;6.0 Aprobado&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt3" data-bs-toggle="modal" data-bs-target="#warningModal3"></button>
+                        </div>
+                        <div>
+                            <h2 id="t4">MARTA CROCHE TRIGO. <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;9.0 Sobresaliente&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt4" data-bs-toggle="modal" data-bs-target="#warningModal4"></button>
+                        </div>
+                        <div>
+                            <h2 id="t5">FÉLIX RODOLFO DÍAZ LORENTE. <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;7.5 Notable&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                        </div>
+                        <div>
+                            <h2 id="t6">MANUEL ESPINOSA GUERRA. <FONT style="color:white; background-color: red; border-radius: 10px;">&nbsp;&nbsp;4.5 Suspenso&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                        </div>
+                        <div>
+                            <h2 id="t7">JUAN IGNACIO FERNÁNDEZ JOVER. <FONT style="color:white; background-color: orangered; border-radius: 10px;">&nbsp;&nbsp;No presentado&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                        </div>
+                        <div>
+                            <h2 id="t8">JULIA FLUITERS PEREIRA. <FONT style="color:white; background-color: red; border-radius: 10px;">&nbsp;&nbsp;4.9 Suspenso&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                        </div>
+                        <div>
+                            <h2 id="t9">MANUEL FREIRE MORAN. <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;5.5 Aprobado&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                        </div>
+                        <div>
+                            <h2 id="t10">JOSÉ MARÍA DE LA FUENTE BAHÓN. <FONT style="color:white; background-color: red; border-radius: 10px;">&nbsp;&nbsp;4.1 Suspenso&nbsp;&nbsp;</FONT></h2>
+                            <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="filtroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-2" id="exampleModalLabel2">Seleccione un filtro de búsqueda:</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div><strong>Por Área:</strong></div>
+                        <div class="p-2">
+                            <div>
+                                <input type="checkbox" id="cboxS1" value="first_S_checkbox"> <label for="cboxS1"><h5>Ofimática</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS2" value="second_S_checkbox"> <label for="cboxS2"><h5>Tecnologías Informáticas</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS3" value="third_S_checkbox"> <label for="cboxS3"><h5>Internet</h5></label>
+                            </div>
+                        </div>
+
+                        <div><strong>Por Nivel:</strong></div>
+                        <div class="p-2">
+                            <div>
+                                <input type="checkbox" id="cboxS4" value="forth_S_checkbox"> <label for="cboxS4"><h5>Iniciación</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5>Generalista</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS6" value="fifth_S_checkbox"> <label for="cboxS5"><h5>Especialización</h5></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="guardar">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

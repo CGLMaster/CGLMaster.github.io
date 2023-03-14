@@ -1,0 +1,389 @@
+body{
+    margin: 0;
+    background-image: url(../Resources/FondoPizarra.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Para la scrrollbar */
+html::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #434343;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+html::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+}
+
+/* La "navbar" */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #011811;
+    height: 15vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.cuenta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3%;
+}
+
+.infoCuenta{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.user{
+    color: #53a43f;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+#cerrarSesion{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+#cerrarSesion:hover{
+    background-color: #860c0c;
+}
+
+.icono {
+    height: 100px;
+    width: 180px;
+    margin-left: 4%;
+}
+
+.icono:hover {
+    cursor: pointer;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    margin-left: 15px;
+}
+
+.titulo {
+    margin-left: 5%;
+    color: white;
+}
+
+/* Para el listado */
+.container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#search{
+    border-top:thin solid  #e5e5e5;
+    border-right:thin solid #e5e5e5;
+    border-bottom:0;
+    border-left:thin solid  #e5e5e5;
+    box-shadow:0px 1px 1px 1px #e5e5e5;
+    height:28px;
+    margin:10px 0 0 .5em;
+    outline:0;
+    padding:.4em 0 .4em .6em;
+    width:270px;
+}
+
+#button-holder{
+    background-color: #7dff5d;
+    border-top:thin solid #e5e5e5;
+    box-shadow:1px 1px 1px 1px #e5e5e5;
+    cursor:pointer;
+    height:28px;
+    margin:10px 0 0 0;
+    text-align:center;
+    width:30px;
+}
+
+#button-holder img{
+    margin:4px;
+    width:20px;
+}
+
+.listItemContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.list-group-item1 {
+    background-color: #7dff5d;
+    border-radius: 10px;
+    margin-bottom: 0.5%;
+}
+
+.cursoInfo {
+    width: 65%;
+}
+
+.botonesListModDel {
+    text-align: right;
+    margin: auto;
+    font-size: 18px;
+    width: 35%;
+    margin-right: 5%;
+}
+
+.listStudents {
+    align-items: center;
+    justify-content:center;
+    color: white;
+    background-color:#196d04;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 35%;
+    padding-left: 2.8%;
+    margin-right: 4%;
+}
+
+.listStudents:hover{
+    background-color:#124c04;
+}
+
+.botonMod {
+    margin-right: 1%;
+    border: 0;
+    background-color: transparent;
+}
+
+.edit {
+    width: 50px;
+    height: 50px;
+}
+
+.botonDel {
+    border: 0;
+    background-color: transparent;
+}
+
+.delete {
+    width: 50px;
+    height: 50px;
+}
+
+.list-group-item2 {
+    background-color: #d1ffc5;
+    border-radius: 10px;
+    margin-bottom: 0.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    margin-left: 2%;
+}
+
+/* Para paginar */
+.paginacion {
+	margin:20px 0;
+}
+
+.paginacion ul {
+	list-style:none;
+	text-align: center;
+}
+
+.paginacion ul li {
+	display:inline-block;
+	margin-right:10px;
+}
+
+.paginacion ul li a {
+	display:block;
+	padding:10px 20px;
+	color:#fff;
+	background:#196d04;
+	text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+	background:#42a629;
+}
+
+.paginacion ul li .active {
+	background:#42a629;
+	font-weight:bold;
+}
+
+/* Para boton que sube arriba */
+.goup{
+	background:#196d04;
+	bottom:0px;
+	display: flex;
+    align-items: center;
+	height: 50px;
+	position: fixed;
+	right:0px;
+	width:50px;
+}
+
+img:not(.logo, .icono):hover{
+    cursor:pointer;
+}
+
+/* Para la lista de alumnos */
+
+#cursesModal > div > div > div > div:not(#inicio) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:3%;
+}
+
+#cursesModal > div > div > div > div > h2{
+    font-size: 18px;
+}
+
+#inicio{
+    margin-bottom: -4.5%;
+    width: 100%;
+}
+
+#inicio > h3{
+    font-size: 13px;
+    color:#717070;
+}
+
+.modal-lg {
+    max-width: 40vw !important;
+}
+
+.subtitulo {
+    text-align: center;
+}
+
+/* Para el encabezado con filtro */
+
+.enunciadoBtnAdd {
+    margin-top: 5%;
+}
+
+.encabezado {
+    color: white;
+    width: 100%;
+    margin-bottom: 0.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.enunciado {
+    margin-left: 2%;
+    width: 100%;
+}
+
+.seccionFiltro {
+    margin: auto;
+}
+/********/
+.multiselect {
+    background-color: white;
+    color: black;
+    margin-bottom: 3%;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    /* display: none; */
+    border: 1px white solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+
+.btnAplicarDiv {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.btnAplicar {
+    background-color: #196d04;
+    border-radius: 10px;
+    color: white;
+    border: 0;
+}
+
+.btnAplicar:hover {
+    background-color: #124c04;
+}
+/********/
+.pp {
+    background-color:#196d04;
+    border: 3px solid #7dff5d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtro {
+    background-color: transparent;
+    border:0;
+}
+
+.pp:hover{
+    background-color:#124c04;
+}
+
+.combobox1 {
+    background-color: violet;
+}
+
+.cuadroSelect1 {
+    background-image: url("../Resources/filtro.pngs");
+}
+
+.seccionAddSearch {
+    display: flex;
+    margin-right: 2%;
+}
+
+.busquedaLupa {
+    display: flex;
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    <title>Document</title>
+    <link href="../CSSs/loginProfesor.css" rel="stylesheet">
+    <title>Ediciones</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<body>
+    <header>
+        <h1 class="titulo">Gestión Matrículas CFI</h1>
+        <img class="icono" src="../Resources/icono.PNG" onclick="javascript:location.replace('../loginProfe.html')">
+        <div class="cuenta">
+            <div class="infoCuenta">
+                <h2 class="user">Virginia Francisco Gilmartín</h2>
+                <a id="cerrarSesion" href="loginProfe.html">&nbsp;&nbsp;Cerrar sesión&nbsp;&nbsp;</a>
+            </div>
+            <img class="logo" src="../Resources/perfil.png">
+        </div>
+    </header>
+    <main class="container">
+        <div class="mileyenda d-flex justify-content-between">
+            <h2>Mis cursos:</h2>
+        </div>
+        <div class="student1" id="S1">
+            <div id="cabecera">
+                <h2>Hojas de cálculo con Excel I</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>EXCEL1 </h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Ofimática</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Generalista </h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Mis alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+            </div>
+        </div>
+        <div class="student1" id="S2">
+            <div id="cabecera">
+                <h2>Hojas de cálculo con Excel II</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>EXCEL2 </h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Ofimática </h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Especialización </h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Mis alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+           </div>
+        </div>
+        <div class="leyenda d-flex justify-content-between">
+            <h2>Listado de otros cursos:</h2>
+            <div>
+                <section class="pp">
+                    <button data-bs-toggle="modal" data-bs-target="#filtroModal" class="filtro">
+                        <img src="../Resources/filtro.png" height="30" width="35">
+                    </button>
+                </section>
+                <input type="search" placeholder='Buscar...' id='search'>
+                <div id='button-holder'>
+                    <img src='../Resources/lupe.png'/>
+                </div>
+            </div>
+        </div>
+        <div class="student1" id="S3">
+            <div id="cabecera">
+                <h2>Edición de textos en Word I</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>WORD1</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Ofimática</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Generalista</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+           </div>
+        </div>
+        <div class="student1" id="S4">
+            <div id="cabecera">
+                <h2>Edición de textos en Word II</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>WORD2</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Ofimática</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Especialización</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+           </div>
+        </div>
+        <div class="student1" id="S5">
+            <div id="cabecera">
+                <h2>Aprende a programar con Scratch</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>SCRATCH</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Tecnologías Informáticas</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Generalista</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+            </div>
+        </div>
+        <div class="student1" id="S6">
+            <div id="cabecera">
+                <h2>Comunicación en redes sociales</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>RRSS</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Internet</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Generalista</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+           </div>
+        </div>
+        <div class="student1" id="S7">
+            <div id="cabecera">
+                <h2>Diseño web con Wordpress</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>WORDPRESS</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Internet</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Generalista</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+           </div>
+        </div>
+        <div class="student1" id="S8">
+            <div id="cabecera">
+                <h2>Introducción a la programación en Python</h2>
+                <div id="info">                    
+                    <h2><b>ID curso: </b>PYTHONINTRO</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Área: </b>Tecnologías Informáticas</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Nivel: </b>Generalista</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Alumnos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+           </div>
+        </div>
+        
+        <section class="paginacion">
+            <ul>
+                <li><a href="Cursos1.html" class="active">1</a></li>
+				<li><a href="Cursos2.html">2</a></li>
+            </ul>
+        <div class="goup"><img id="I19" src="../Resources/desplegar_blanco.png" height ="30" width="50"></div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){ 
+            $(window).scroll(function(){ 
+                if ($(this).scrollTop() > 200) { 
+                    $('.goup').fadeIn(); 
+                } else { 
+                    $('.goup').fadeOut(); 
+                } 
+            }); 
+            $('.goup').click(function(){ 
+                $("html, body").animate({ scrollTop: 0 }, 20); 
+                return false; 
+            }); 
+        });
+    </script>
+      <div class="modal fade" id="cursesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-2" id="exampleModalLabel2">Alumn@s en el curso</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            <div class="modal-body">
+                <div class="inicio" style="background-color: white;">
+                    <h3>Si desea ver la información de cada alumno, pinche encima de su nombre</h3>
+                </div>
+                <div>
+                    <div>
+                        <h2 id="t1" onclick="desplegar('infoModal1')">MARÍA BARCENILLA HINCHADO</h2>
+                        <div id="infoModal1">                    
+                            <h2><b>DNI: </b>67325643X</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>mbarcenilla@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>10 Matrícula de Honor</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t2" onclick="desplegar('infoModal2')">ALBERTO CHAVES LÓPEZ</h2>
+                        <div id="infoModal2">                    
+                            <h2><b>DNI: </b>48937682G</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>achaves@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>7 Notable</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t3" onclick="desplegar('infoModal3')">BRYAN EDUARDO CÓRDOVA ASCURRA</h2>
+                        <div id="infoModal3">                    
+                            <h2><b>DNI: </b>69326584H</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>bcordova@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>10 Matrícula de Honor</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t4" onclick="desplegar('infoModal4')">MARTA CROCHE TRIGO</h2>
+                        <div id="infoModal4">                    
+                            <h2><b>DNI: </b>96749367J</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>mcroche@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>8 Notable</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t5" onclick="desplegar('infoModal5')">FÉLIX RODOLFO DÍAZ LORENTE</h2>
+                        <div id="infoModal5">                    
+                            <h2><b>DNI: </b>53647893J</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>frodolfo@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>4.9 Suspenso</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t6" onclick="desplegar('infoModal6')">MANUEL ESPINOSA GUERRA</h2>
+                        <div id="infoModal6">                    
+                            <h2><b>DNI: </b>54637288L</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>mespinosa@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>6.6 Aprobado</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t7" onclick="desplegar('infoModal7')">JUAN IGNACIO FERNÁNDEZ JOVER</h2>
+                        <div id="infoModal7">                    
+                            <h2><b>DNI: </b>74839267P</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>jfernandez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>8.7 Notable</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t8" onclick="desplegar('infoModal8')">JULIA FLUITERS PEREIRA</h2>
+                        <div id="infoModal8">                    
+                            <h2><b>DNI: </b>81523476S</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>jfluiters@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>9 Sobresaliente</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t9" onclick="desplegar('infoModal9')">MANUEL FREIRE MORAN</h2>
+                        <div id="infoModal9">                    
+                            <h2><b>DNI: </b>90256938T</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>mfreire@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>9 Sobresaliente</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t10" onclick="desplegar('infoModal10')">JOSÉ MARÍA DE LA FUENTE BAHÓN</h2>
+                        <div id="infoModal10">                    
+                            <h2><b>DNI: </b>53628590R</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>jmaria@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>7.5 Notable</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t11" onclick="desplegar('infoModal11')">JESÚS GARCÍA PEÑA</h2>
+                        <div id="infoModal11">                    
+                            <h2><b>DNI: </b>93562746D</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>jgarcia@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>7.7 Notable</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t12" onclick="desplegar('infoModal12')">DAVID GARCÍA SÁNCHEZ</h2>
+                        <div id="infoModal12">                    
+                            <h2><b>DNI: </b>91253648K</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>dgarcia@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>5.9 Aprobado</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t13" onclick="desplegar('infoModal13')">CARLOS GÓMEZ LÓPEZ</h2>
+                        <div id="infoModal13">                    
+                            <h2><b>DNI: </b>24356745L</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>cgomez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>10 Matrícula de Honor</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t14" onclick="desplegar('infoModal14')">MARTA GÓMEZ SÁNCHEZ</h2>
+                        <div id="infoModal14">                    
+                            <h2><b>DNI: </b>12345678F</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>mgomez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>9.2 Sobresaliente</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t15" onclick="desplegar('infoModal15')">ÁLEX MILÁN GÓMEZ VALLECILLO</h2>
+                        <div id="infoModal15">                    
+                            <h2><b>DNI: </b>54637281C</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>agomez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>9.5 Sobresaliente</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t16" onclick="desplegar('infoModal16')">PABLO GONZÁLEZ ÁLVAREZ</h2>
+                        <div id="infoModal16">                    
+                            <h2><b>DNI: </b>74635894T</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>pgonzalez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>8.4 Notable</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t17" onclick="desplegar('infoModal17')">ALEJANDRO GONZÁLEZ BAONZA</h2>
+                        <div id="infoModal17">                    
+                            <h2><b>DNI: </b>78940524T</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>agonzalez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>5 Aprobado</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t18" onclick="desplegar('infoModal18')">JAIME GONZÁLEZ FÁBREGAS</h2>
+                        <div id="infoModal18">                    
+                            <h2><b>DNI: </b>90876542D</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>jgonzalez@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>6.9 Aprobado</h2>
+                        </div>
+                    </div>
+¡                </div>
+                <div>
+                    <div>
+                        <h2 id="t19" onclick="desplegar('infoModal19')">ROGGER YURI HUAYLLASCO DE LA CRUZ</h2>
+                        <div id="infoModal19">                    
+                            <h2><b>DNI: </b>54637892G</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Email: </b>ryuri@ucm.es</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h2><b>Nota: </b>9 Sobresaliente</h2>
+                        </div>
+                    </div>
+¡                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        let clic = 1;
+        function desplegar(id){
+            const contenido = document.getElementById(id);
+            if(clic==1){
+                contenido.style.setProperty('display','flex');
+                clic = 2;
+            } else{   
+                contenido.style.setProperty('display','none');
+                clic = 1;
+            }   
+        }
+      </script>
+      <div class="modal fade" id="calificationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qúe nota quieres otorgarle a este alumno?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label id="name" class="col-form-label">Calificación obtenida por el alumno:</label>
+                      <input type="number" class="form-control" id="nota"  min="0" max="10">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal">Guardar cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <script>
+        $(document).ready(function (e) {
+          $('#calificationModal').on('show.bs.modal', function(e) {    
+             var id = $(e.relatedTarget).data().id;
+             var array = id.split('&');
+             document.getElementById("exampleModalLabel").innerHTML= "¿Qúe nota quieres otorgarle a " + id + " ?";
+             document.getElementById("name").innerHTML= "Calificación obtenida por " + id;
+          });
+        });
+     </script>
+
+<div class="modal fade" id="filtroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-2" id="exampleModalLabel2">Seleccione un filtro de búsqueda:</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div><strong>Por Área:</strong></div>
+                <div class="p-2">
+                    <div>
+                        <input type="checkbox" id="cboxS1" value="first_S_checkbox"> <label for="cboxS1"><h5>Ofimática</h5></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cboxS2" value="second_S_checkbox"> <label for="cboxS2"><h5>Tecnologías Informáticas</h5></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cboxS3" value="third_S_checkbox"> <label for="cboxS3"><h5>Internet</h5></label>
+                    </div>
+                </div>
+
+                <div><strong>Por Nivel:</strong></div>
+                <div class="p-2">
+                    <div>
+                        <input type="checkbox" id="cboxS4" value="forth_S_checkbox"> <label for="cboxS4"><h5>Iniciación</h5></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5>Generalista</h5></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cboxS6" value="fifth_S_checkbox"> <label for="cboxS5"><h5>Especialización</h5></label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="guardar">Aplicar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

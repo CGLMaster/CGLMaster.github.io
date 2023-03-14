@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Normalmente accedes a un CDN; aquí uso una copia local -->
+    <link href="css/bootstrap-5.2.2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!-- Esto aparece como título de la ventana o pestaña en el navegador -->
+    <title>CursoManager</title>
+    <link rel="shortcut icon" href="./recursos/logoUCM.png">
+    <link rel="stylesheet" href="./css/index.css" media="screen">
+</head>
+
+<body>
+    <!-- Navbar principal -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(47, 137, 255);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html" style="color: white;">CursoManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown perfilOpt">
+                        <a class="nav-link dropdown-toggle perfilOpt" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Perfil
+                        </a>
+                        <ul class="dropdown-menu bg-dark menuPerfil">
+                            <li><a class="dropdown-item liAdmin" href="#">Admin</a></li>
+                            <li><hr class="dropdown-divider bg-light"></li>
+                            <li><a class="dropdown-item liprof" href="#">Profesor</a></li>
+                            <li><a class="dropdown-item liAlum" href="#">Alumno</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-item ms-auto">
+                    <div class="btn-group">
+                        <button id="save" class="btn btn-outline-secondary">💾</button>
+                        <button id="clean" class="btn btn-outline-secondary">🧽</button>
+                        <button id="restore" class="btn btn-outline-secondary">↩️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Div principal; container-fluid expande el contenedor para que ocupe todo el espacio disponible -->
+    <div class="container-fluid mt-5 pt-2">
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active " id="usuarios-tab" data-bs-toggle="tab" data-bs-target="#usuarios-tab-pane" type="button" role="tab" aria-controls="usuarios-tab-pane" aria-selected="true">👥 Usuarios</button>
+                    </li>
+                    <li class="nav-item " role="presentation">
+                        <button class="nav-link" id="cursos-tab" data-bs-toggle="tab" data-bs-target="#cursos-tab-pane" type="button" role="tab" aria-controls="cursos-tab-pane" aria-selected="false">🎓 Cursos</button>
+                    </li>
+                </ul>
+                <div class="tab-content overflow-scroll vh-100 rounded" style="background-color: rgba(10, 83, 190, 0.7);" id="myTabContent">
+                    <div class="tab-pane fade show active " id="usuarios-tab-pane" role="tabpanel" aria-labelledby="usuarios-tab" tabindex="0">
+                        <div id="users">
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="cursos-tab-pane" role="tabpanel" aria-labelledby="cursos-tab" tabindex="0">
+                        <div id="courses">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5 parteDrch overflow-scroll vh-100 rounded" style="background-color: rgba(10, 83, 190, 0.7);">
+                <div id="details">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Modal para pedir información
+        siempre usamos el mismo, y no se muestra hasta que hace falta
+    -->
+    <div class="modal fade " id="cmModal" tabindex="-1" aria-labelledby="cmEditLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cmEditLabel">
+                        <!-- reemplazar desde JS -->
+                        Editando patata
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" id="cmEditForm">
+                        <!-- reemplazar desde JS -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="cmAcceptModal" class="btn btn-primary edit">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="cmModalDel" tabindex="-1" aria-labelledby="cmDeleteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cmDeleteLabel">
+                        ¿Seguro de que quieres eliminarlos?
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="cmModalButton">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDelete">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <!-- cabecera del diálogo -->
+                <div class="modal-header">
+                    <h5 class="modal-title">¿Esta seguro de que quiere eliminarlo?</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- pie de foto -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="cmDeleteModal" class="btn btn-primary rm-fila" data-bs-dismiss="modal" value="">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDeleteUserEdition">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <!-- cabecera del diálogo -->
+                <div class="modal-header">
+                    <h5 class="modal-title">¿Esta seguro de que quiere eliminarlo?</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- pie de foto -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="cmDeleteEditionModal" class="btn btn-primary rm-from-edition" data-bs-dismiss="modal" value="">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap usando una copia local -->
+    <script src="js/bootstrap-5.2.2.bundle.js"></script>
+
+    <!-- Todos los scripts de interaccion, aqui -->
+    <script src="js/cursos.js" type="module"></script>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        function limpiarUsers(){
+            document.getElementById("nameUser").value = "";
+            document.getElementById("dni").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("role").value = "";
+            console.log("filtrando");
+            E.advancedUserFilter("#filter-in-users", ".user-table-row");
+        }
+
+        function limpiarCourses(){
+            document.getElementById("nameCourse").value = "";
+            document.getElementById("area").value = "";
+            document.getElementById("nivel").value = "";
+            document.getElementById("anio").value = "";
+            console.log("filtrando");
+            E.advancedCourseFilter("#filter-in-courses", ".course-table-row");
+        }
+
+        function limpiarStudents(){
+            document.getElementById("nameStudent").value = "";
+            document.getElementById("dniStudent").value = "";
+            document.getElementById("emailStudent").value = "";
+            document.getElementById("note").value = "";
+            console.log("filtrando");
+            E.advancedStudentFilter("#filter-in-users-group", ".student-table-row");
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function (e) {
+            $('#modalDelete').on('show.bs.modal', function(e) {    
+                var id = $(e.relatedTarget).data().id;
+                console.log(id);
+                $('#cmDeleteModal').attr("value",id);
+            });
+        });
+
+        $(document).ready(function (e) {
+            $('#modalDeleteUserEdition').on('show.bs.modal', function(e) {    
+                var id = $(e.relatedTarget).data().id;
+                console.log(id);
+                $('#cmDeleteEditionModal').attr("value",id);
+            });
+        });
+
+        $(document).ready(function (e) {
+            $('#cmModalDel').on('show.bs.modal', function(e) {    
+                var id = $(e.relatedTarget).data().id;
+                console.log(id);
+                if(id === 'U'){
+                    $('#cmModalButton').attr("value", "rm-users");
+                }
+                else if(id === 'C'){
+                    $('#cmModalButton').attr("value", "rm-courses");
+                }
+                else if(id === 'P'){
+                    $('#cmModalButton').attr("value", "rm-professors");
+                }
+                else{
+                    $('#cmModalButton').attr("value", "rm-students");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="CSSs/login.css" rel="stylesheet">
+        <title>Administrador</title>
+    </head>
+
+    <body class="m-0 vh-100 row justify-content-center align-items-center">
+        <div class="tabs text-center">
+            <h1 class="titulo text-center">Bienvenid@ al Sistema de Gestión de Matrículas de la UCM</h1>
+            <h2 class="subtitulo text-center">Seleccione un perfil para acceder</h2>
+            <hr>
+            <div class="tab-container">
+                <div id="tab1" class="tab">
+                    <a href="#tab1"><strong>Acceso Alumno</strong></a>
+                    <div class="tab-content">
+                        <div class="login text-center">
+                            <div class="iconDiv"><img src="Resources/icono.PNG" width="125" height="80"></div>
+                            <form action="loginAlumno.html" method="post">
+                                <div>
+                                    <input type="text" name="u" placeholder="Nombre de Usuario" required="required" class="userDiv"/>
+                                </div>
+                                <div>
+                                    <input type="password" name="p" placeholder="Contraseña" required="required" class="contraseniaDiv"/>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btnAcceso">Acceder</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+
+                <div id="tab2" class="tab">
+                    <a href="#tab2"><strong>Acceso Profesor</strong></a>
+                    <div class="tab-content">
+                        <div class="login text-center">
+                            <div class="iconDiv"><img src="Resources/icono.PNG" width="125" height="80"></div>
+                            <form action="loginProfe.html" method="post">
+                                <div>
+                                    <input type="text" name="u" placeholder="Nombre de Usuario" required="required" class="userDiv"/>
+                                </div>
+                                <div>
+                                    <input type="password" name="p" placeholder="Contraseña" required="required" class="contraseniaDiv"/>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btnAcceso">Acceder</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+
+                <div id="tab3" class="tab">
+                    <a href="#tab3"><strong>Acceso Administrador</strong></a>
+                    <div class="tab-content">
+                        <div class="login text-center">
+                            <div class="iconDiv"><img src="Resources/icono.PNG" width="125" height="80"></div>
+                            <form action="index.html" method="post">
+                                <div>
+                                    <input type="text" name="u" placeholder="Nombre de Usuario" required="required" class="userDiv"/>
+                                </div>
+                                <div>
+                                    <input type="password" name="p" placeholder="Contraseña" required="required" class="contraseniaDiv"/>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btnAcceso">Acceder</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+

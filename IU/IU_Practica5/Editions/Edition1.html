@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="../CSSs/curse1.css" rel="stylesheet">
+        <link href="../CSSs/edition.css" rel="stylesheet">
+        <!-- <link href="../CSSs/index.css" rel="stylesheet"> -->
+        <title>GUI</title>
+
+       
+
+    </head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <body>
+        <header>
+            <h1 class="titulo">Gestión Matrículas CFI</h1>
+            <img class="icono" src="../Resources/icono.PNG" onclick="javascript:location.replace('../index.html')">
+            <div class="cuenta">
+                <div class="infoCuenta">
+                    <h2 class="user">Virginia Francisco Gilmartín</h2>
+                    <a id="cerrarSesion" href="loginProfe.html">&nbsp;&nbsp;Cerrar sesión&nbsp;&nbsp;</a>
+                </div>
+                <img class="logo" src="../Resources/perfil.png">
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="enunciadoBtnAdd d-flex justify-content-between">
+                <div class="encabezado">
+                    <div><h2 class="enunciado">Listado de ediciones disponibles:</h2></div>
+                    <div class="seccionAddSearch">
+                        <div class="botonAdd">
+                            <img src="../Resources/aniadir.png" height="50" width="50" title="Añadir curso" data-bs-toggle="modal" data-bs-target="#editModal" data-id="1&Añadir nueva edición">
+                        </div>
+                        <div class="busquedaLupa">
+                            <input type="search" placeholder='Buscar...' id='search'>
+                            <div id='button-holder'>
+                                <img src='../Resources/lupe.png'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> EXCEL122-23 &nbsp;&nbsp; -->
+                                <h2>EXCEL1_22-23</h2>
+                                <!-- <strong>ID curso:</strong> EXCEL1 &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="EXCEL1&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> EXCEL222-23 &nbsp;&nbsp; -->
+                                <h2>EXCEL2_22-23</h2>
+                                <!-- <strong>ID curso:</strong> EXCEL2 &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+                    
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="EXCEL2&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> WORD122-23 &nbsp;&nbsp; -->
+                                <h2>WORD1_22-23</h2>
+                                <!-- <strong>ID curso:</strong> WORD1 &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="WORD1&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> WORD222-23 &nbsp;&nbsp; -->
+                                <h2>WORD2_22-23</h2>
+                                <!-- <strong>ID curso:</strong> WORD2 &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="WORD2&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> SCRATCH22-23 &nbsp;&nbsp; -->
+                                <h2>SCRATCH_22-23</h2>
+                                <!-- <strong>ID curso:</strong> SCRATCH &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="SCRATCH&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> RSS22-23 &nbsp;&nbsp; -->
+                                <h2>RRSS_22-23</h2>
+                                <!-- <strong>ID curso:</strong> RRSS &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="RRSS&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> WORDPRESS22-23 &nbsp;&nbsp; -->
+                                <h2>WORDPRESS_22-23</h2>
+                                <!-- <strong>ID curso:</strong> WORDPRESS &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="WORDPRESS&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> PYTHON22-23 &nbsp;&nbsp; -->
+                                <h2>PYTHON_22-23</h2>
+                                <!-- <strong>ID curso:</strong> PYTHON &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="PYTHON&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> LATEX22-23 &nbsp;&nbsp; -->
+                                <h2>LATEX_22-23</h2>
+                                <!-- <strong>ID curso:</strong> LATEX &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="LATEX&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> DRIVE22-23 &nbsp;&nbsp; -->
+                                <h2>DRIVE_22-23</h2>
+                                <!-- <strong>ID curso:</strong> DRIVE &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="DRIVE&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> DRIVE22-23 &nbsp;&nbsp; -->
+                                <h2>TIC_22-23</h2>
+                                <!-- <strong>ID curso:</strong> TIC &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="TIC&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> DRIVE22-23 &nbsp;&nbsp; -->
+                                <h2>PPT_22-23</h2>
+                                <!-- <strong>ID curso:</strong> PPT &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="PPT&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item1">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> DRIVE22-23 &nbsp;&nbsp; -->
+                                <h2>HTML5_22-23</h2>
+                                <!-- <strong>ID curso:</strong> HTML5 &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="HTML5&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item2">
+                    <div class="listItemContent">
+                        <div class="cursoInfo">
+                            <section>
+                                <!-- <strong>ID edición:</strong> DRIVE22-23 &nbsp;&nbsp; -->
+                                <h2>ACCESS_22-23</h2>
+                                <!-- <strong>ID curso:</strong> ACCESS &nbsp;&nbsp;
+                                <strong>Curso académico:</strong> 22-23 -->
+                            </section>
+                        </div>
+
+                        <div class="botonesList">
+                            <section>
+                                <button data-bs-toggle="modal" data-bs-target="#editionStudentsModal" class="botonesEd">
+                                    Alumnos
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#editionTeachersModal" class="botonesEd">
+                                    Profesores
+                                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                                </button>
+                                <button class="botonMod">
+                                    <img src="../Resources/lapiz.png" class="edit" title="Editar edición" data-bs-toggle="modal" data-bs-target="#editModal" data-id="ACCESS&22-23">
+                                </button>
+                                <button class="botonDel">
+                                    <img src="../Resources/eliminar.png" class="delete" title="Eliminar edición" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- Para paginar -->
+            <section class="paginacion">
+                <ul>
+                    <li><a href="Edition1.html" class="active">1</a></li>
+                    <li><a href="Edition2.html">2</a></li>
+                </ul>
+                <div class="goup">
+                    <img id="I19" src="../Resources/desplegar_blanco.png" height ="30" width="50">
+                </div>
+            </section>
+
+        </main>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){ 
+                $(window).scroll(function(){ 
+                    if ($(this).scrollTop() > 200) { 
+                        $('.goup').fadeIn(); 
+                    } else { 
+                        $('.goup').fadeOut(); 
+                    } 
+                }); 
+                $('.goup').click(function(){ 
+                    $("html, body").animate({ scrollTop: 0 }, 20); 
+                    return false; 
+                }); 
+            });
+        </script>
+
+        <script>
+            $(document).ready(function (e) {
+                $('#editModal').on('show.bs.modal', function(e) {    
+                    var id = $(e.relatedTarget).data().id;
+                    var array = id.split('&');
+                    if(array[0] === '1'){
+                        document.getElementById("exampleModalLabel").innerHTML= array[1];
+                        document.getElementById("guardar").innerHTML = "Añadir";
+                        $(e.currentTarget).find('#idCurse').val(array[2]);
+                        $(e.currentTarget).find('#academicYear').val(array[3]);
+                    }
+                    else{
+                        document.getElementById("exampleModalLabel").innerHTML= "Editar información de la edición";
+                        document.getElementById("guardar").innerHTML = "Guardar cambios";
+                        $(e.currentTarget).find('#idCurse').val(array[0]);
+                        $(e.currentTarget).find('#academicYear').val(array[1]);
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            $('#aceptar1').on('click', function(e)  {
+                console.log("entre");
+                $('#bt1').addClass("disabled");
+                document.getElementById("t1").style.textDecoration = "line-through";
+            })
+            $('#aceptar2').on('click', function (e) {
+                $('#bt2').addClass("disabled");
+                document.getElementById("t2").style.textDecoration = "line-through";
+            })
+            $('#aceptar3').on('click', function (e) {
+                $('#bt3').addClass("disabled");
+                document.getElementById("t3").style.textDecoration = "line-through";
+            })
+            $('#aceptar4').on('click', function (e) {
+                $('#bt4').addClass("disabled");
+                document.getElementById("t4").style.textDecoration = "line-through";
+            })
+            $('#aceptar5').on('click', function (e) {
+                $('#bt5').addClass("disabled");
+                document.getElementById("t5").style.textDecoration = "line-through";
+            })
+        </script>
+
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar información de la edición</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                            <label for="idCurse" class="col-form-label">ID del curso:</label>
+                            <input type="text" class="form-control" id="idCurse" placeholder="Introduzca el identificador del curso">
+                            </div>
+                            <div class="form-group">
+                                <label for="academicYear" class="col-form-label">Curso académico:</label>
+                                <input type="text" class="form-control" id="academicYear" placeholder="Introduzca el curso académico">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="guardar">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Para boton eliminar -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2>¿Está seguro de que quiere eliminar esta edicion?</h2>
+                    </div>     
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="editionStudentsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-2" id="exampleModalLabel2">Alumnos de la edición</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="inicio">
+                            <p>Si desea vincular/desvincular alumnos, pulse en la casilla</p>
+                        </div>
+                        <div id="scroll-list">
+                            <div>
+                                <input type="checkbox" id="cboxS1" value="first_S_checkbox" checked="checked"> <label for="cboxS1"><h5> MARÍA BARCENILLA HINCHADO</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS2" value="second_S_checkbox" checked="checked"> <label for="cboxS2"><h5> ALBERTO CHAVES LÓPEZ</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS3" value="third_S_checkbox" checked="checked"> <label for="cboxS3"><h5> BRYAN EDUARDO CÓRDOVA ASCURRA</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS4" value="forth_S_checkbox"> <label for="cboxS4"><h5> MARTA CROCHE TRIGO</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> FÉLIX RODOLFO DÍAZ LORENTE</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS6" value="fifth_S_checkbox"> <label for="cboxS6"><h5> MANUEL ESPINOSA GUERRA</h5></label>
+                            </div>
+                            <!-- <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> JUAN IGNACIO FERNÁNDEZ JOVER</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> JULIA FLUITERS PEREIRA</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> MANUEL FREIRE MORAN</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> JOSÉ MARÍA DE LA FUENTE BAHÓN</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> JESÚS GARCÍA PEÑA</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> DAVID GARCÍA SÁNCHEZ</h5></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cboxS5" value="fifth_S_checkbox"> <label for="cboxS5"><h5> CARLOS GÓMEZ LÓPEZ</h5></label>
+                            </div> -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+
+        <div class="modal fade" id="editionTeachersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-2" id="exampleModalLabel2">Profesores de la edición</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="scroll-list">
+                        <div id="inicio">
+                            <h3>Si desea vincular/desvincular profesores, pulse en la casilla</h3>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="checkbox" id="cbox1" value="first_checkbox"> <label for="cbox1"><h5> MARÍA ELVIRA ALBERT ALBIOL</h5></label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2"><h5> PURIFICACIÓN ARENAS SÁNCHEZ</h5></label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="checkbox" id="cbox3" value="third_checkbox"> <label for="cbox3"><h5> JAVIER ARROYO GALLARDO</h5></label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="checkbox" id="cbox4" value="forth_checkbox"> <label for="cbox4"><h5> DANIEL BASCONES ARROYO</h5></label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="checkbox" id="cbox5" value="fifth_checkbox"> <label for="cbox5"><h5> MIGUEL BENITO PAREJO</h5></label>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        
+
+    </body>
+</html>

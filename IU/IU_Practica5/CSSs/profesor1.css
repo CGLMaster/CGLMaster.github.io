@@ -1,0 +1,392 @@
+
+/* MAIN */
+
+body{
+    margin: 0;
+    background-image: url(../Resources/FondoPizarra.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+html::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #434343;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+html::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #011811;
+    height: 15vh;
+    width: 100%; 
+    position: sticky;
+    top: 0;
+}
+.cuenta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3%;
+}
+.infoCuenta{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.user{
+    color: #53a43f;
+    margin: 0;
+    margin-bottom: 8px;
+}
+#cerrarSesion{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    text-decoration:none;
+}
+#cerrarSesion:hover{
+    background-color: #860c0c;
+}
+.icono{
+    height: 100px;
+    width: 180px;
+    margin-left: 4%;
+}
+.icono:hover{
+    cursor: pointer;
+}  
+.logo{
+    height: 80px;
+    width: 80px;
+    margin-left: 15px;
+}
+.titulo{
+    margin-left: 5%;
+    color: white;
+}
+
+img:not(.logo, .icono):hover{
+    cursor:pointer;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fila1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fila2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.estudiante{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 100px;
+}
+
+.estudiante > img{
+    height: 27vh;
+    width: 13vw;
+}
+
+.profesor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.profesor > img{
+    height: 27vh;
+    width: 13vw;
+}
+
+.curso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 100px;
+}
+
+.curso > img{
+    height: 27vh;
+    width: 13vw;
+}
+
+.edicion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.edicion > img{
+    height: 27vh;
+    width: 13vw;
+}
+
+main{
+    margin-top: 8vh;
+}
+
+/* STUDENT */
+
+.leyenda{
+    height: 55px;
+    width: 100%;
+}
+
+.leyenda h2{
+    margin-left:1%;
+    font-size: xx-large;
+    color: white;
+}
+
+.leyenda > div{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1%;
+}
+
+.leyenda > div > img{
+    margin-right: 15px;
+}
+
+#search{
+    border-top:thin solid  #e5e5e5;
+    border-right:thin solid #e5e5e5;
+    border-bottom:0;
+    border-left:thin solid  #e5e5e5;
+    box-shadow:0px 1px 1px 1px #e5e5e5;
+    float:left;
+    height:28px;
+    margin:10px 0 0 .5em; 
+    outline:0;
+    padding:.4em 0 .4em .6em; 
+    width:270px; 
+}
+   
+#button-holder{
+    background-color: #7dff5d;
+    border-top:thin solid #e5e5e5;
+    box-shadow:1px 1px 1px 1px #e5e5e5;
+    cursor:pointer;
+    float:left;
+    height:28px;
+    margin:10px 0 0 0;
+    text-align:center;
+    width:30px;
+}
+   
+#button-holder img{
+    margin:4px;
+    width:20px; 
+}
+
+.student1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5%;
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+}
+.student1:nth-child(even){
+    background-color:#7dff5d;
+}
+.student1:nth-child(odd){
+    background-color:#d1ffc5;
+}
+
+#cabecera{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top:15px;
+    margin-left: 1%;
+}
+
+#cabecera h2{
+    font-size: 28px;
+}
+
+#cabecera > div >h2{
+    font-size: 20px;
+}
+
+#info{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    margin-right: 5%;
+}
+.botones button{
+    color: white;
+    background-color:#196d04;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.botones button:hover{
+    background-color:#124c04;
+}
+
+.info{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10%;
+}
+
+.contenido{
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.student1:nth-child(even) .contenido{
+    background-color:#7dff5d;
+}
+.student1:nth-child(odd) .contenido{
+    background-color:#d1ffc5;
+}
+
+.info h2{
+    margin:0;
+}
+.info ol{
+    margin:0;
+    list-style-type: circle;
+}
+
+.paginacion {
+	margin:20px 0;
+}
+
+.paginacion ul {
+	list-style:none;
+	text-align: center;
+}
+
+.paginacion ul li {
+	display:inline-block;
+	margin-right:10px;
+}
+
+.paginacion ul li a {
+	display:block;
+	padding:10px 20px;
+	color:#fff;
+	background:#196d04;
+	text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+	background:#42a629;
+}
+
+.paginacion ul li .active {
+	background:#42a629;
+	font-weight:bold;
+}
+
+.goup{
+	background:#196d04;
+	bottom:0px;
+	display: flex;
+    align-items: center;
+	height: 50px;
+	position: fixed;
+	right:0px;
+	width:50px;
+}
+
+.editar{
+    height: 50px;
+    width: 50px;
+}
+
+.eliminar{
+    height: 48px;
+    width: 50px;
+    margin-left: 15px;
+}
+
+#cursesModal > div > div > div > div:not(#inicio) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:3%;
+}
+
+#cursesModal > div > div > div > div > h2{
+    font-size: 18px;
+}
+
+#inicio{
+    display: flex;
+    margin-bottom: 0.5%;
+    align-items: center;
+    justify-content: center ;
+    width: 100%;
+}
+
+#inicio > h3{
+    font-size: 13px;
+    color:#717070;
+}
+
+.modal-lg {
+    max-width: 40vw !important;
+}
+
+

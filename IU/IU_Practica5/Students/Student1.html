@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    <title>Document</title>
+    <link href="../CSSs/index.css" rel="stylesheet">
+    <title>Student1</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<body>
+    <header>
+        <h1 class="titulo">Gestión Matrículas CFI</h1>
+        <img class="icono" src="../Resources/icono.PNG" onclick="javascript:location.replace('../index.html')">
+        <div class="cuenta">
+            <div class="infoCuenta">
+                <h2 class="user">Virginia Francisco Gilmartín</h2>
+                <a id="cerrarSesion" href="login.html">&nbsp;&nbsp;Cerrar sesión&nbsp;&nbsp;</a>
+            </div>
+            <img class="logo" src="../Resources/perfil.png">
+        </div>
+    </header>
+    <main class="container">
+        <div class="leyenda d-flex justify-content-between">
+            <h2>Listado de alumnos registrados:</h2>
+            <div>
+                <img src="../Resources/aniadir.png"/ height="50" width="50" title="Añadir alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="1&Añadir nuevo alumno">
+                <input type="search" placeholder='Buscar...' id='search'>
+                <div id='button-holder'>
+                    <img src='../Resources/lupe.png'/>
+                </div>
+            </div>
+        </div>
+        <div class="student1" id="S1">
+            <div id="cabecera">
+                <h2>MARÍA BARCENILLA HINCHADO</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>67325643X</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>mbarcenilla@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+                <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="0&MARÍA BARCENILLA HINCHADO&67325643X&mbarcenilla@ucm.es">
+                <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+            </div>
+        </div>
+        <div class="student1" id="S2">
+            <div id="cabecera">
+                <h2>ALBERTO CHAVES LÓPEZ</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>48937682G</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>achaves@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="ALBERTO CHAVES LÓPEZ&48937682G&achaves@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S3">
+            <div id="cabecera">
+                <h2>BRYAN EDUARDO CÓRDOVA ASCURRA</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>69326584H</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>bcordova@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="BRYAN EDUARDO CÓRDOVA ASCURRA&69326584H&bcordova@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S4">
+            <div id="cabecera">
+                <h2>MARTA CROCHE TRIGO</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>96749367J</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>mcroche@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="MARTA CROCHE TRIGO&96749367J&mcroche@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S5">
+            <div id="cabecera">
+                <h2>FÉLIX RODOLFO DÍAZ LORENTE</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>53647893J</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>frodolfo@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+                <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="FÉLIX RODOLFO DÍAZ LORENTE&53647893J&frodolfo@ucm.es">
+                <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+            </div>
+        </div>
+        <div class="student1" id="S6">
+            <div id="cabecera">
+                <h2>MANUEL ESPINOSA GUERRA</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>54637288L</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>mespinosa@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="MANUEL ESPINOSA GUERRA&54637288L&mespinosa@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S7">
+            <div id="cabecera">
+                <h2>JUAN IGNACIO FERNÁNDEZ JOVER</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>74839267P</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>jfernandez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="JUAN IGNACIO FERNÁNDEZ JOVER&74839267P&jfernandez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S8">
+            <div id="cabecera">
+                <h2 class="col">JULIA FLUITERS PEREIRA</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>81523476S</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>jfluiters@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="JULIA FLUITERS PEREIRA&81523476S&jfluiters@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S9">
+            <div id="cabecera">
+                <h2>MANUEL FREIRE MORAN</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>90256938T</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>mfreire@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+                <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="MANUEL FREIRE MORAN&90256938T&mfreire@ucm.es">
+                <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+            </div>
+        </div>
+        <div class="student1" id="S10">
+            <div id="cabecera">
+                <h2>JOSÉ MARÍA DE LA FUENTE BAHÓN</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>53628590R</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>jmaria@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+                <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="JOSÉ MARÍA DE LA FUENTE BAHÓN&53628590R&jmaria@ucm.es">
+                <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+            </div> 
+        </div>
+        <div class="student1" id="S11">
+            <div id="cabecera">
+                <h2>JESÚS GARCÍA PEÑA</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>93562746D</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>jgarcia@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="JESÚS GARCÍA PEÑA&93562746D&jgarcia@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>  
+        </div>
+        <div class="student1" id="S12">
+            <div id="cabecera">
+                <h2>DAVID GARCÍA SÁNCHEZ</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>91253648K</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>dgarcia@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="DAVID GARCÍA SÁNCHEZ&91253648K&dgarcia@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div> 
+        </div>
+        <div class="student1" id="S13">
+            <div id="cabecera">
+                <h2>CARLOS GÓMEZ LÓPEZ</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>24356745L</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>cgomez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="CARLOS GÓMEZ LÓPEZ&24356745L&cgomez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S14">
+            <div id="cabecera">
+                <h2>MARTA GÓMEZ SÁNCHEZ</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>12345678F</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>mgomez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="MARTA GÓMEZ SÁNCHEZ&12345678F&mgomez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S15">
+            <div id="cabecera">
+                <h2>ÁLEX MILÁN GÓMEZ VALLECILLO</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>54637281C</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>agomez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="ÁLEX MILÁN GÓMEZ VALLECILLO&54637281C&agomez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S16">
+            <div id="cabecera">
+                <h2>PABLO GONZÁLEZ ÁLVAREZ</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>74635894T</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>pgonzalez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="PABLO GONZÁLEZ ÁLVAREZ&74635894T&pgonzalez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>  
+        </div>
+        <div class="student1" id="S17">
+            <div id="cabecera">
+                <h2>ALEJANDRO GONZÁLEZ BAONZA</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>78940524T</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>agonzalez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="ALEJANDRO GONZÁLEZ BAONZA&78940524T&agonzalez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S18">
+            <div id="cabecera">
+                <h2>JAIME GONZÁLEZ FÁBREGAS</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>90876542D</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>jgonzalez@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="JAIME GONZÁLEZ FÁBREGAS&90876542D&jgonzalez@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <div class="student1" id="S19">
+            <div id="cabecera">
+                <h2>ROGGER YURI HUAYLLASCO DE LA CRUZ</h2>
+                <div id="info">                    
+                    <h2><b>DNI: </b>54637892G</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2><b>Email: </b>ryuri@ucm.es</h2>
+                </div>
+            </div>
+            <div class="botones">
+                <button data-bs-toggle="modal" data-bs-target="#cursesModal">
+                    Cursos
+                    <img src="../Resources/desplegar_blanco_inverso.png" height="20">
+                </button>
+               <img class="editar" src="../Resources/lapiz.png" title="Editar alumno" data-bs-toggle="modal" data-bs-target="#editModal" data-id="ROGGER YURI HUAYLLASCO DE LA CRUZ&54637892G&ryuri@ucm.es">
+               <img class="eliminar" src="../Resources/eliminar.png" title="Eliminar alumno" data-bs-toggle="modal" data-bs-target="#deleteModal">
+           </div>
+        </div>
+        <section class="paginacion">
+            <ul>
+                <li><a href="Student1.html" class="active">1</a></li>
+				<li><a href="Student2.html">2</a></li>
+            </ul>
+        <div class="goup"><img id="I19" src="../Resources/desplegar_blanco.png" height ="30" width="50"></div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){ 
+            $(window).scroll(function(){ 
+                if ($(this).scrollTop() > 200) { 
+                    $('.goup').fadeIn(); 
+                } else { 
+                    $('.goup').fadeOut(); 
+                } 
+            }); 
+            $('.goup').click(function(){ 
+                $("html, body").animate({ scrollTop: 0 }, 20); 
+                return false; 
+            }); 
+        });
+    </script>
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Editar información del alumn@</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="name" class="col-form-label">Nombre y apellidos:</label>
+                      <input type="text" class="form-control" id="name" placeholder="Inserte su nombre y apellidos">
+                    </div>
+                    <div class="form-group">
+                      <label for="dni" class="col-form-label">DNI:</label>
+                      <input type="text" class="form-control" id="dni" placeholder="Introduzca el DNI">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Introduzca el email">
+                      </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="guardar">Guardar cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function (e) {
+          $('#editModal').on('show.bs.modal', function(e) {    
+             var id = $(e.relatedTarget).data().id;
+             var array = id.split('&');
+             if(array[0] === '1'){
+                document.getElementById("exampleModalLabel").innerHTML= array[1];
+                document.getElementById("guardar").innerHTML = "Añadir";
+                $(e.currentTarget).find('#name').val(array[2]);
+                $(e.currentTarget).find('#dni').val(array[3]);
+                $(e.currentTarget).find('#email').val(array[4]);
+             }
+             else{
+                document.getElementById("exampleModalLabel").innerHTML= "Editar información del alumn@";
+                document.getElementById("guardar").innerHTML = "Guardar cambios";
+                $(e.currentTarget).find('#name').val(array[1]);
+                $(e.currentTarget).find('#dni').val(array[2]);
+                $(e.currentTarget).find('#email').val(array[3]);
+             }
+          });
+        });
+     </script>
+     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h2>¿Está seguro de que quiere eliminar a este alumno?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="cursesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-2" id="exampleModalLabel2">Cursos del alumn@</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            <div class="modal-body">
+                <div id="inicio">
+                    <h3>Si desea desmatricular al alumno, pulse la "X"</h3>
+                </div>
+                <div>
+                    <h2 id="t1">Hojas de cálculo con Excel I: <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;8.0 Notable&nbsp;&nbsp;</FONT></h2>
+                    <button type="button" class="btn-close" id="bt1" data-bs-toggle="modal" data-bs-target="#warningModal1"></button>
+                </div>
+                <div>
+                    <h2 id="t2">Aprende a programar con Scratch: <FONT style="color:white; background-color: orangered; border-radius: 10px;">&nbsp;&nbsp;No presentado&nbsp;&nbsp;</FONT></h2>
+                    <button type="button" class="btn-close" id="bt2" data-bs-toggle="modal" data-bs-target="#warningModal2"></button>
+                </div>
+                <div>
+                    <h2 id="t3">Introducción a la programación en Python: <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;6.0 Aprobado&nbsp;&nbsp;</FONT></h2>
+                    <button type="button" class="btn-close" id="bt3" data-bs-toggle="modal" data-bs-target="#warningModal3"></button>
+                </div>
+                <div>
+                    <h2 id="t4">Ofimática en la nube con Google Drive: <FONT style="color:white; background-color: green; border-radius: 10px;">&nbsp;&nbsp;9.0 Sobresaliente&nbsp;&nbsp;</FONT></h2>
+                    <button type="button" class="btn-close" id="bt4" data-bs-toggle="modal" data-bs-target="#warningModal4"></button>
+                </div>
+                <div>
+                    <h2 id="t5">Textos científicos con LaTex: <FONT style="color:white; background-color: red; border-radius: 10px;">&nbsp;&nbsp;4.5 Suspenso&nbsp;&nbsp;</FONT></h2>
+                    <button type="button" class="btn-close" id="bt5" data-bs-toggle="modal" data-bs-target="#warningModal5"></button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="warningModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h2>¿Está seguro de que quiere desmatricular al alumno de este curso?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"data-bs-dismiss="modal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" id="aceptar1" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal" data-id="">Acepto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="warningModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h2>¿Está seguro de que quiere desmatricular al alumno de este curso?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"data-bs-dismiss="modal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" id="aceptar2" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal" data-id="">Acepto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="warningModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h2>¿Está seguro de que quiere desmatricular al alumno de este curso?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"data-bs-dismiss="modal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" id="aceptar3" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal" data-id="">Acepto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="warningModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h2>¿Está seguro de que quiere desmatricular al alumno de este curso?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"data-bs-dismiss="modal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" id="aceptar4" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal" data-id="">Acepto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="warningModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h2>¿Está seguro de que quiere desmatricular al alumno de este curso?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"data-bs-dismiss="modal">Cerrar</button>
+              <!-- Cuando se quiera mitar implementacion para que funcione quitar data-bs-dismiss="modal" -->
+              <button type="button" id="aceptar5" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cursesModal" data-id="">Acepto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <script>
+        $('#aceptar1').on('click', function(e)  {
+            console.log("entre");
+            $('#bt1').addClass("disabled");
+            document.getElementById("t1").style.textDecoration = "line-through";
+        })
+        $('#aceptar2').on('click', function (e) {
+            $('#bt2').addClass("disabled");
+            document.getElementById("t2").style.textDecoration = "line-through";
+        })
+        $('#aceptar3').on('click', function (e) {
+            $('#bt3').addClass("disabled");
+            document.getElementById("t3").style.textDecoration = "line-through";
+        })
+        $('#aceptar4').on('click', function (e) {
+            $('#bt4').addClass("disabled");
+            document.getElementById("t4").style.textDecoration = "line-through";
+        })
+        $('#aceptar5').on('click', function (e) {
+            $('#bt5').addClass("disabled");
+            document.getElementById("t5").style.textDecoration = "line-through";
+        })
+     </script>
+</body>
+</html>

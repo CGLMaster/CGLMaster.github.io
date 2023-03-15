@@ -675,6 +675,7 @@ function dimensions() {
     D = Math.round(Math.sqrt((r * r) + (c * c))) * 0.1;
     inputPenalizacion.setAttribute("max", D);
     grid.innerHTML = '';
+    waypoints = [];
     init();
 }
 

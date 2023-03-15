@@ -676,6 +676,7 @@ function dimensions() {
     inputPenalizacion.setAttribute("max", D);
     grid.innerHTML = '';
     waypoints = [];
+    console.log(waypoints);
     init();
 }
 

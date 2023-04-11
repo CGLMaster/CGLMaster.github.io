@@ -1,0 +1,53 @@
+/* required LIB STYLES */
+/* .Treant se automatski dodaje na svaki chart conatiner */
+.Treant {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.Treant>.node,
+.Treant>.pseudo {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+}
+
+.Treant.Treant-loaded .node,
+.Treant.Treant-loaded .pseudo {
+    visibility: visible;
+}
+
+.Treant>.pseudo {
+    width: 0;
+    height: 0;
+    border: none;
+    padding: 0;
+}
+
+.Treant .collapse-switch {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    border: solid #186118;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.Treant .collapsed .collapse-switch {
+    border: solid #186118;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.Treant>.node img {
+    border: none;
+    float: left;
+}

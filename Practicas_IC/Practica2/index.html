@@ -19,21 +19,27 @@
     <nav class="navbar sticky-top d-flex align-items-center justify-content-center shadow" id="cabecera">
         <h1>Algoritmo ID3</h1>
     </nav>
-    <div class="mt-3 ms-5 mb-2">
-        <input type="file" id="atributosFile" accept=".txt">
-        <input type="file" id="ejemplosFile" accept=".txt">
-        <button class="custom-btn" id="procesar" onclick="init()"><span>Procesar</span></button>
+    <div class="d-flex align-items-center mt-3 ms-5">
+        <div class="mb-2 input-container">
+            <div class="input-group">
+                <label class="input-group-text" for="atributosFile">Atributos</label>
+                <input class="form-control" type="file" id="atributosFile" accept=".txt">
+            </div>
+            <div class="input-group mt-2">
+                <label class="input-group-text" for="ejemplosFile">Ejemplos</label>
+                <input class="form-control" type="file" id="ejemplosFile" accept=".txt">
+            </div>
+        </div>
+        <button class="custom-btn ms-4" id="procesar" onclick="init()"><span>Procesar</span></button>
     </div>
     <button class="mt-3 ms-5 mb-2 custom-btn" id="algorithm" onclick="algorithm()"><span>Realizar algoritmo
             ID3</span></button>
-    <div class="d-flex align-items-center justify-content-between ms-5" id="content">
+    <div class="d-flex align-items-start justify-content-between ms-5" id="content">
         <div id="content-table">
             <table class="table table-bordered" id="tabla"></table>
         </div>
         <div id="arbol">
-
             <div id="tree-simple"> </div>
-
         </div>
     </div>
     <div class="d-flex justify-content-around ms-5" id="info"></div>

@@ -214,3 +214,17 @@ thead {
     border-radius: 5px;
     padding: 0.5em;
 }
+
+.input-container {
+    width: 40%;
+}
+
+.input-group-text{
+    background-color: #186118 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.form-control{
+    border: 1px solid #186118 !important;  
+}

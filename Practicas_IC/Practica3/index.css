@@ -1,0 +1,184 @@
+html,
+body {
+    height: 100%;
+}
+
+#cabecera {
+    background-color: #186118;
+    color: white;
+    height: 13%;
+}
+
+.custom-btn {
+    height: 40px;
+    color: white;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+#leerMuestras-button, #leerMuestra-button{
+    width: 250px;
+}
+
+#ejecutar-button, #clasificar{
+    width: 180px;
+}
+
+#leerMuestras-button,
+#ejecutar-button,
+#clasificar,
+#leerMuestra-button {
+    background: #00ee10;
+    background: linear-gradient(150deg, #00ee10 0%, #186118 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+#leerMuestras-button span,
+#ejecutar-button span,
+#clasificar span,
+#leerMuestra-button span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#leerMuestras-button:before,
+#leerMuestras-button:after,
+#ejecutar-button:before,
+#ejecutar-button:after,
+#clasificar:before,
+#clasificar:after,
+#leerMuestra-button:before,
+#leerMuestra-button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #05970f;
+    transition: all 0.3s ease;
+}
+
+#leerMuestras-button:before,
+#ejecutar-button:before,
+#clasificar:before,
+#leerMuestra-button:before {
+    height: 0%;
+    width: 2px;
+}
+
+#leerMuestras-button:after,
+#ejecutar-button:after,
+#clasificar:after,
+#leerMuestra-button:after {
+    width: 0%;
+    height: 2px;
+}
+
+#leerMuestras-button:hover,
+#ejecutar-button:hover,
+#clasificar:hover, 
+#leerMuestra-button:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+#leerMuestras-button:hover:before,
+#ejecutar-button:hover:before,
+#clasificar:hover:before,
+#leerMuestra-button:hover:before {
+    height: 100%;
+}
+
+#leerMuestras-button:hover:after,
+#ejecutar-button:hover:after,
+#clasificar:hover:after,
+#leerMuestra-button:hover:after {
+    width: 100%;
+}
+
+#leerMuestras-button span:hover,
+#ejecutar-button span:hover,
+#clasificar span:hover,
+#leerMuestra-button span:hover {
+    color: #05970f;
+}
+
+#leerMuestras-button span:before,
+#leerMuestras-button span:after,
+#ejecutar-button span:before,
+#ejecutar-button span:after,
+#clasificar span:before,
+#clasificar span:after,
+#leerMuestra-button span:before,
+#leerMuestra-button span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #05970f;
+    transition: all 0.3s ease;
+}
+
+#leerMuestras-button span:before,
+#ejecutar-button span:before,
+#clasificar span:before,
+#leerMuestra-button span::before {
+    width: 2px;
+    height: 0%;
+}
+
+#leerMuestras-button span:after,
+#ejecutar-button span:after,
+#clasificar span:after,
+#leerMuestra-button span:after {
+    width: 0%;
+    height: 2px;
+}
+
+#leerMuestras-button span:hover:before,
+#ejecutar-button span:hover:before,
+#clasificar span:hover:before,
+#leerMuestra-button span:hover:before {
+    height: 100%;
+}
+
+#leerMuestras-button span:hover:after,
+#ejecutar-button span:hover:after,
+#clasificar span:hover:after,
+#leerMuestra-button span:hover:after {
+    width: 100%;
+}
+
+#selectContainer{
+    margin-top: 20px;
+    width: 40%;
+}
+
+#labelAlgoritmo{
+    font-size: 20px;
+}
+
+.input-container {
+    width: 40%;
+}
+
+.input-group-text{
+    background-color: #186118 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.form-control{
+    border: 1px solid #186118 !important;  
+}
+
+#resultado{
+    color:#186118;
+}

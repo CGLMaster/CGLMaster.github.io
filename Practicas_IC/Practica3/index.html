@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Modelos Tratamiento Datos</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top d-flex align-items-center justify-content-center shadow" id="cabecera">
+        <h1>Métodos de clasificación</h1>
+    </nav>
+    <div class="ms-5 mb-2" id="selectContainer">
+        <label id="labelAlgoritmo" for="algoritmos">Seleccionar algoritmo a utilizar:</label>
+        <select class="form-select" id="algoritmos">
+            <option value="KMedias">K-Medias</option>
+            <option selected value="Bayes">Bayes</option>
+            <option value="Lloyd">Lloyd</option>
+        </select>
+    </div>
+
+    <div class="ms-5 mb-2 input-container" id="contenedor">
+        <h1 id="algorithm-title">Bayes</h1>
+        <div class="input-group mt-2 mb-2">
+            <label class="input-group-text" id="labelEjemplos" for="ejemplosFileBayes">Archivo de ejemplos</label>
+            <input class="form-control" type="file" id="ejemplosFileBayes" name="ejemplosFile" accept=".txt">
+        </div>
+        <button class="custom-btn" id="leerMuestras-button" onclick="lecturaFicherosBayes()"><span>Leer fichero muestras</span></button>
+        <button class="custom-btn" id="ejecutar-button" onclick="ejecutarBayes()"><span>Entrenar</span></button>
+
+        <hr>
+
+        <h2>Ejemplo</h2>
+
+        <div class="input-group mt-2 mb-2">
+            <label class="input-group-text" id="labelMuestra" for="ejemploEjemploFileBayes">Ejemplo</label>
+            <input class="form-control" type="file" id="ejemploEjemploFileBayes" accept=".txt">
+        </div>
+        <button class="custom-btn" id="leerMuestra-button" onclick="lecturaFicheroEjemploBayes()"><span>Leer muestra</span></button>
+        <button class="custom-btn" id="clasificar" onclick="ejecutarEjemploBayes()"><span>Clasificación</span></button>
+
+    </div>
+
+    <h1 class="ms-5 mt-2 me-5 text-center" id="resultado"></h1>
+
+</body>
+<script>
+    let anterior = 'Bayes';
+    $('#algoritmos').change(function(){
+        var algoritmo = $('#algoritmos').val();
+        $('#algorithm-title').text(algoritmo);
+        let ejemplos = '#ejemplosFile' + anterior;
+        $(ejemplos).attr('id', 'ejemplosFile' + algoritmo);
+        $('#labelEjemplos').attr('for', 'ejemplosFile' + algoritmo);
+        let lecturaEjemplos = 'lecturaFicheros' + algoritmo + '()';
+        $('#leerMuestras-button').attr('onclick', lecturaEjemplos);
+        let ejecutarEjemplos = 'ejecutar' + algoritmo + '()';
+        $('#ejecutar-button').attr('onclick', ejecutarEjemplos);
+        let muestra = '#ejemploEjemploFile' + anterior;
+        $(muestra).attr('id', 'ejemploEjemploFile' + algoritmo);
+        $('#labelMuestra').attr('for', 'ejemploEjemploFile' + algoritmo);
+        let lecturaMuestra = 'lecturaFicheroEjemplo' + algoritmo + '()';
+        $('#leerMuestra-button').attr('onclick', lecturaMuestra);
+        let clasificar = 'ejecutarEjemplo' + algoritmo + '()';
+        $('#clasificar').attr('onclick', clasificar);
+        anterior = algoritmo;
+    });
+</script>
+<script src="./k-medias.js"></script>
+<script src="./bayes.js"></script>
+<script src="./lloyd.js"></script>
+
+</html>

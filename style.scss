@@ -74,11 +74,11 @@ nav {
             .dropdown {
                 position: relative;
             }
-            
+
             .dropdown-toggle {
                 position: relative;
             }
-            
+
             .dropdown-menu {
                 display: none;
                 position: absolute;
@@ -107,16 +107,16 @@ nav {
 
                 }
             }
-            
+
             .dropdown.open .dropdown-menu {
                 display: block;
             }
-            
+
             .open {
                 display: block !important;
             }
-            
-            
+
+
         }
     }
 }
@@ -181,6 +181,7 @@ nav {
 
 
             }
+
             .dropdown-menu {
                 background-color: white;
 
@@ -191,7 +192,7 @@ nav {
                     &:focus {
                         color: $mainNaranja;
                         transition: 0.4s;
-    
+
                         &::after {
                             opacity: 1;
                             transform: translate3d(0, 0.2em, 0);
@@ -704,6 +705,16 @@ section {
             h3 {
                 font-size: 18px;
             }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+            transition-delay: 0;
         }
     }
 

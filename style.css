@@ -563,6 +563,9 @@ section h1 {
   .len .lenContent h3 {
     font-size: 18px;
   }
+  .len:nth-child(2), .len:nth-child(3), .len:nth-child(4), .len:nth-child(5), .len:nth-child(6), .len:nth-child(7), .len:nth-child(8) {
+    transition-delay: 0;
+  }
   #proyects h1 {
     font-size: 40px;
   }

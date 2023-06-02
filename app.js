@@ -1,7 +1,9 @@
 // NAVBAR CHANGE
 window.addEventListener("scroll", () => {
-    var navbar = document.querySelector("nav");
-    navbar.classList.toggle("sticky", window.scrollY > 0);
+    if (window.innerWidth > 720) {
+        var navbar = document.querySelector("nav");
+        navbar.classList.toggle("sticky", window.scrollY > 0);
+    }
 });
 
 // OWN DROPDOWN MENU AND SCROLLBAR LINKS
@@ -79,3 +81,42 @@ paragraphs.forEach((p) => {
         p.classList.add('truncate');
     }
 });
+
+// MOBILE VERSION
+
+const menuIcon = document.querySelector('.menu-icon');
+const menuIcon2 = document.querySelector('.menu-icon2');
+const nav = document.querySelector('nav');
+
+menuIcon.addEventListener('click', function () {
+    nav.classList.add('open');
+    menuIcon.classList.add('open');
+    menuIcon2.classList.remove('open');
+    toggleMenu();
+});
+
+menuIcon2.addEventListener('click', function () {
+    nav.classList.remove('open');
+    menuIcon2.classList.add('open');
+    menuIcon.classList.remove('open');
+    toggleMenu();
+});
+
+// BLUR (DESENFOQUE)
+
+function toggleMenu() {
+    var content = document.getElementById("content");
+    var about = document.getElementById("about");
+    var lenguagues = document.getElementById("lenguagues");
+    var frontEnd = document.getElementById("frontEnd");
+    var backEnd = document.getElementById("backEnd");
+    var proyects = document.getElementById("proyects");
+    content.classList.toggle("blur");
+    about.classList.toggle("blur");
+    lenguagues.classList.toggle("blur");
+    frontEnd.classList.toggle("blur");
+    backEnd.classList.toggle("blur");
+    proyects.classList.toggle("blur");
+}
+
+

@@ -100,6 +100,20 @@ nav .menu li .dropdown.open .dropdown-menu {
 nav .menu li .open {
   display: block !important;
 }
+nav #language-button {
+  background-color: #274efc;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+nav #language-button span {
+  font-size: 17px;
+}
+nav #language-button:hover {
+  background-color: #f0c058;
+}
 
 .portfolio {
   position: relative;
@@ -713,6 +727,9 @@ nav.open ~ * {
     display: block;
     position: static;
     transform: none;
+  }
+  nav .menu #language-button {
+    margin-top: 20px;
   }
   nav.open {
     padding: 0;

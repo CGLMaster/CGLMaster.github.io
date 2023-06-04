@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" id="htmlTag">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- FLAGS ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
     <script defer src="app.js"></script>
 </head>
 
@@ -34,10 +37,11 @@
                 </ul>
             </li>
             <li><a class="scrollLink" href="#proyects">Proyectos</a></li>
+            <button id="language-button" class="lenguage" data-lang="es"><span id="spanLenguage" class="fi fi-es"></span>&nbsp;ES</button>
         </ul>
     </nav>
-    
-    
+
+
 
     <div id="content">
         <h4 class="hidden">Hola, mi nombre es</h4>
@@ -54,81 +58,86 @@
         <div class="main hidden">
             <img src="./img/fotoCurriculum.jpeg" alt="">
             <div class="about-me">
-                <h2>Sobre mi</h2>
-                <p> Buenas, soy Carlos Gómez López.
+                <h2 id="aboutTitle">Sobre mi</h2>
+                <p id="paragraph"> Buenas, soy Carlos Gómez López.
                     <br>
-                    Actualmente soy estudiante de cuarto en el grado de Ingeniería de Software en la <a href="https://www.ucm.es/">Universidad Complutense de Madrid (UCM)</a>.
+                    Actualmente soy estudiante de cuarto en el grado de Ingeniería de Software en la
+                    <a href="https://www.ucm.es/">Universidad Complutense de Madrid (UCM)</a>.
                     <br>
-                    Empecé a interesarme en la informática desde joven y gracias a lo que me ha enseñado la carrera ha generado que tenga más interés
-                    y ganas de aprender nuevos conocimientos y especializarme en otros. En mis últimos años me he especializado en front, aunque simplemente como entretenimiento,
+                    Empecé a interesarme en la informática desde joven y gracias a lo que me ha enseñado la carrera ha
+                    generado que tenga más interés
+                    y ganas de aprender nuevos conocimientos y especializarme en otros. En mis últimos años me he
+                    especializado en front, aunque simplemente como entretenimiento,
                     ya que me desenvuelvo bien tanto en front-end como en back-end.
                     <br>
-                    Además, a lo largo de la carrera he podido aprender conocimientos con respecto a la ciberseguridad, análisis de grafos, empleo de algoritmos eficientes, etc.
+                    Además, a lo largo de la carrera he podido aprender conocimientos con respecto a la ciberseguridad,
+                    análisis de grafos, empleo de algoritmos eficientes, etc.
                     <br>
-                    En mi tiempo libre me gusta adquirir conocimientos nuevos para beneficio propio, salir con los amigos y realizar deporte.
+                    En mi tiempo libre me gusta adquirir conocimientos nuevos para beneficio propio, salir con los
+                    amigos y realizar deporte.
                 </p>
-                <button><a href="mailto:carlos9gomezl@gmail.com">Ponte en contacto conmigo</a></button>
+                <button><a id="contact" href="mailto:carlos9gomezl@gmail.com">Ponte en contacto conmigo</a></button>
             </div>
         </div>
     </section>
 
     <section id="lenguagues">
-        <h1>Lenguajes de programación</h1>
+        <h1 id="lenguaguesTitle">Lenguajes de programación</h1>
         <div class="codeLen">
             <div class="len hidden">
                 <img src="./img/c.png" alt="">
                 <div class="lenContent">
                     <h2>C</h2>
-                    <h3>Nivel: <span>Bajo</span></h3>
+                    <h3 class="level">Nivel: <span>Bajo</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/c++.png" alt="">
                 <div class="lenContent">
                     <h2>C++</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/java.png" alt="">
                 <div class="lenContent">
                     <h2>Java</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/js.png" alt="">
                 <div class="lenContent">
                     <h2>JavaScript</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/sql.png" alt="">
                 <div class="lenContent">
                     <h2>SQL</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/python.png" alt="">
                 <div class="lenContent">
                     <h2>Python</h2>
-                    <h3>Nivel: <span>Bajo</span></h3>
+                    <h3 class="level">Nivel: <span>Bajo</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/bash.png" alt="">
                 <div class="lenContent">
                     <h2>Bash</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/phaser.png" alt="">
                 <div class="lenContent">
                     <h2>Phaser 3</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
         </div>
@@ -141,42 +150,42 @@
                 <img src="./img/html.png" alt="">
                 <div class="lenContent">
                     <h2>HTML</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/css.png" alt="">
                 <div class="lenContent">
                     <h2>CSS</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/bootstrap.png" alt="">
                 <div class="lenContent">
                     <h2>Bootstrap</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/sass.png" alt="">
                 <div class="lenContent">
                     <h2>SASS</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/react.png" alt="">
                 <div class="lenContent">
                     <h2>React.js</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/react-native.png" alt="">
                 <div class="lenContent">
                     <h2>React Native</h2>
-                    <h3>Nivel: <span>Bajo</span></h3>
+                    <h3 class="level">Nivel: <span>Bajo</span></h3>
                 </div>
             </div>
         </div>
@@ -189,56 +198,57 @@
                 <img src="./img/nodejs.png" alt="">
                 <div class="lenContent">
                     <h2>Node JS</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/mongodb.png" alt="">
                 <div class="lenContent">
                     <h2>Mongo DB</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/expressjs.png" alt="">
                 <div class="lenContent">
                     <h2>Express JS</h2>
-                    <h3>Nivel: <span>Alto</span></h3>
+                    <h3 class="level">Nivel: <span>Alto</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/mongoose.png" alt="" style="border-radius: 50%">
                 <div class="lenContent">
                     <h2>Mongoose</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/mysql.png" alt="">
                 <div class="lenContent">
                     <h2>MySQL</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
             <div class="len hidden">
                 <img src="./img/oracleSQL.png" alt="">
                 <div class="lenContent">
                     <h2>Oracle SQL</h2>
-                    <h3>Nivel: <span>Medio</span></h3>
+                    <h3 class="level">Nivel: <span>Medio</span></h3>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="proyects">
-        <h1>Proyectos realizados</h1>
+        <h1 id="proyectsTitle">Proyectos realizados</h1>
         <div class="box">
             <div class="card hidden">
                 <img src="./img/thevideogamebox.png" alt="">
                 <h5>The VideoGameBox</h5>
                 <div class="info">
-                    <p>
-                        The VideoGameBox es una aplicación de escritorio enfocada a aquellas personas que tienen grandes colecciones de videojuegos
+                    <p class="proyectParagraph">
+                        The VideoGameBox es una aplicación de escritorio enfocada a aquellas personas que tienen grandes
+                        colecciones de videojuegos
                         y quieren poder gestionarlas y organizarlas de una manera sencilla.
                     </p>
                     <p>
@@ -250,8 +260,9 @@
                 <img src="./img/theVideogamebox_web.png" alt="">
                 <h5>The VideoGameBox Web</h5>
                 <div class="info">
-                    <p>
-                        The VideoGameBox Web es una aplicación web enfocada a aquellas personas que quieren informarse sobre videojuegos
+                    <p class="proyectParagraph">
+                        The VideoGameBox Web es una aplicación web enfocada a aquellas personas que quieren informarse
+                        sobre videojuegos
                         y quieren poder gestionarlos y organizarlos de una manera sencilla.
                     </p>
                     <p>
@@ -263,8 +274,9 @@
                 <img src="./img/theGamusinner.png" alt="">
                 <h5>The GamuSinner</h5>
                 <div class="info">
-                    <p>
-                        The GamuSinner es una juego web sobre una gran aventura a través de distintos escenarios de España
+                    <p class="proyectParagraph">
+                        The GamuSinner es una juego web sobre una gran aventura a través de distintos escenarios de
+                        España
                         en la que te enfrentarás a mazmorras repletas de criaturas fantásticas y mitológicas.
                     </p>
                     <p>
@@ -278,7 +290,7 @@
                 <img src="./img/supermercado.png" alt="">
                 <h5>Supermercado</h5>
                 <div class="info">
-                    <p>
+                    <p class="proyectParagraph">
                         Supermercado es una aplicación de escritorio para controlar las compras que se realicen,
                         los productos, las marcas de éstos y los proveedores que las distribuyen.
                     </p>
@@ -291,7 +303,7 @@
                 <img src="./img/restaurante.PNG" alt="">
                 <h5>Restaurante</h5>
                 <div class="info">
-                    <p>
+                    <p class="proyectParagraph">
                         Restaurante es una aplicación de escritorio para controlar un restaurante basado en pedidos,
                         los cuales contienen platos y cada uno de éstos es atendido por el personal del restaurante.
                     </p>

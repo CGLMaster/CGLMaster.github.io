@@ -125,6 +125,25 @@ nav {
 
         }
     }
+
+    #language-button {
+        background-color: $mainColor;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        padding: 6px 12px;
+
+        span {
+            font-size: 17px;
+        }
+
+        &:hover {
+            background-color: $mainNaranja;
+        }
+
+    }
+
 }
 
 .portfolio {
@@ -914,6 +933,10 @@ nav.open~* {
                     transform: none;
                 }
             }
+
+            #language-button {
+                margin-top: 20px;
+            }
         }
 
         &.open {
@@ -925,6 +948,7 @@ nav.open~* {
                 opacity: 1;
             }
         }
+
     }
 
     // ABOUT ME
@@ -1092,11 +1116,12 @@ nav.open~* {
     .box {
         .card {
 
-            h5{
+            h5 {
                 font-size: 15px;
             }
-            .info{
-                p{
+
+            .info {
+                p {
                     font-size: 13px;
                 }
             }
@@ -1108,4 +1133,3 @@ nav.open~* {
         }
     }
 }
-

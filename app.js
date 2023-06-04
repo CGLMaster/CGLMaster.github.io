@@ -1,6 +1,6 @@
 // NAVBAR CHANGE
 window.addEventListener("scroll", () => {
-    if (window.innerWidth > 720) {
+    if (window.innerWidth > 834) {
         var navbar = document.querySelector("nav");
         navbar.classList.toggle("sticky", window.scrollY > 0);
     }
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var targetId = this.getAttribute('href');
             var targetElement = document.querySelector(targetId);
             var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            var offset = window.innerWidth < 1140 ? 80 : 0;
+            var offset = window.innerWidth < 835 ? 0 : window.innerWidth < 1140 ? 80 : 0;
             window.scrollTo({
                 top: targetPosition - offset,
                 behavior: 'smooth'
@@ -101,6 +101,15 @@ menuIcon2.addEventListener('click', function () {
     menuIcon.classList.remove('open');
     toggleMenu();
 });
+
+document.addEventListener('click', function (event) {
+    if (!nav.contains(event.target) && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      menuIcon2.classList.add('open');
+      menuIcon.classList.remove('open');
+      toggleMenu();
+    }
+  });
 
 // BLUR (DESENFOQUE)
 

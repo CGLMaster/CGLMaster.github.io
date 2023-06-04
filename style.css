@@ -536,13 +536,11 @@ section h1 {
     max-width: 100%;
     width: 300px;
   }
-  .about-me {
-    text-align: center;
-  }
   .about-me h2 {
     font-size: 40px;
   }
   .about-me p {
+    text-align: justify;
     font-size: 16px;
   }
   section {
@@ -599,7 +597,7 @@ nav.open ~ * {
   transition: filter 0.3s ease;
 }
 
-@media (max-width: 792px) {
+@media (max-width: 834px) {
   nav {
     padding: 20px;
     flex-direction: column;
@@ -723,6 +721,103 @@ nav.open ~ * {
     display: block;
     left: 0;
     opacity: 1;
+  }
+  #about {
+    padding: 10px;
+  }
+  #about img {
+    max-width: 100%;
+    width: 300px;
+  }
+  #about .about-me {
+    width: 70%;
+  }
+  #about .about-me h2 {
+    font-size: 40px;
+  }
+  #about .about-me p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 825px) {
+  .box {
+    flex-direction: column;
+  }
+  .box .card:nth-child(2), .box .card:nth-child(3) {
+    transition-delay: none;
+  }
+}
+@media (max-width: 767px) {
+  #content {
+    padding: 5vh 0;
+  }
+  #content h1 {
+    font-size: 30px;
+  }
+  #content h1 span {
+    font-size: 50px;
+  }
+  #content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #content .links h3 {
+    padding-right: 5px;
+  }
+  #content .links h3 a {
+    font-size: 30px;
+  }
+}
+@media (max-width: 428px) {
+  nav .menu {
+    padding: auto;
+    left: -50%;
+    height: 100%;
+    width: 40%;
+  }
+  nav .menu li a {
+    font-size: 15px;
+  }
+  nav .menu .dropdown .dropdown-menu li a {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  nav .menu .dropdown .dropdown-menu li a:nth-child(1) {
+    margin-top: 0;
+  }
+  #about {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #about img {
+    max-width: 100%;
+    width: 300px;
+  }
+  #about .about-me {
+    width: 90%;
+  }
+  #about .about-me h2 {
+    font-size: 35px;
+  }
+  #about .about-me p {
+    font-size: 14px;
+  }
+  section h1 {
+    font-size: 35px;
+  }
+  #proyects h1 {
+    font-size: 35px;
+  }
+  .box .card h5 {
+    font-size: 15px;
+  }
+  .box .card .info p {
+    font-size: 13px;
+  }
+  .box .card .button {
+    padding: 6px 16px;
+    font-size: 14px;
   }
 }
 

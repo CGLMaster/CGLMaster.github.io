@@ -156,7 +156,7 @@ function changeToEnglish() {
 
     let translationsNavbar = {
         "Inicio": "Home",
-        "Sobre mi": "About me",
+        "Sobre Mi": "About Me",
         "Habilidades": "Skills",
         "Lenguajes": "Lenguages",
         "Front-End": "Front-End",
@@ -228,7 +228,7 @@ function changeToSpanish() {
 
     let translationsNavbar = {
         "Home": "Inicio",
-        "About me": "Sobre mi",
+        "About Me": "Sobre Mi",
         "Skills": "Habilidades",
         "Lenguages": "Lenguajes",
         "Front-End": "Front-End",
@@ -296,7 +296,9 @@ function changeToSpanish() {
 function translate(array, textToTranslate) {
     for (let i = 0; i < array.length; i++) {
         let currentText = array[i].innerText.trim();
+        console.log(currentText)
         let translatedText = textToTranslate[currentText];
+        console.log(translatedText)
         if (translatedText) {
             array[i].innerHTML = translatedText;
         }
